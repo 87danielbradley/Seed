@@ -4,7 +4,7 @@
 
 ### 1. [Hosting on Heroku](#) (0.5 days)
   + Deploy Skeleton to Heroku.
-  + 
+  
 ### 2. [User Authentication](#) (1-2 days)
   + Unique log-in and log-out splash page.
   + Allow users to sign up new accounts and login/logout of existing accounts.
