@@ -18,7 +18,7 @@ class LoginForm extends React.Component{
     }
     handleSubmit(e){
         e.preventDefault();
-        this.props.createUser(this.state)
+        this.props.login(this.state)
             .then( () => this.props.history.push('/'))
 
     }
@@ -40,11 +40,11 @@ class LoginForm extends React.Component{
                     <label>Password:
                         <input 
                             type="password"
-                            value={this.state.email}
-                            onChange={this.update('email')}
+                            value={this.state.password}
+                            onChange={this.update('password')}
                         />
                     </label>
-                    <button onClick={this.handleSubmit}>Sign Up!</button>
+                    <button onClick={this.handleSubmit}>Log in</button>
                 </form>
             </div>
         )

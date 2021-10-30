@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import { logger } from 'redux-logger'
 
 const configureStore = (state={}) => (
-    createStore(RootReducer, state, applyMiddleware(thunk, logger))
+    createStore(RootReducer, state, applyMiddleware(thunk))
 );
 
 

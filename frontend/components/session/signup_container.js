@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import {createNewUser} from '../../actions/session'
+import {createUser} from '../../actions/session'
 
 
 import SignupForm from './signup'
