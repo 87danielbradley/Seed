@@ -15,9 +15,8 @@
 #
 class User < ApplicationRecord
     #FIGVAPER
-    attr_reader :password_digest
-    after_initialize :ensure_session_token
-
+    attr_reader :password
+    
     validates :name, presence: true
     validates :email, presence: true
     validates :password_digest, presence: true
@@ -28,6 +27,8 @@ class User < ApplicationRecord
     validates :biography, length: {maximum: 300}
     validates :created_at, presence: true
     validates :password, length: {minimum: 6, allow_nil: true}
+    
+    after_initialize :ensure_session_token
 
     belongs_to :location,
         foreign_key: :location_id,
@@ -46,7 +47,7 @@ class User < ApplicationRecord
         if user && user.is_password?(password)
             user
         else
-            allow_nil
+            nil
         end
     end
 
