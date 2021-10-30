@@ -14,8 +14,6 @@ class Pledge < ApplicationRecord
     validates :pledge_amount, presence: true
     validates :reward_id, presence: true
 
-    validates :created_at, presence: true
-    validates :updated_at, presence: true
 
     belongs_to :pledge,
         foreign_key: :pledge_id,

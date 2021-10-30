@@ -14,9 +14,6 @@ class Faq < ApplicationRecord
     validates :question, presence: true
     validates :answer, presence: true
 
-    validates :created_at, presence: true
-    validates :updated_at, presence: true
-
     belongs_to :project,
         foreign_key: :project_id,
         class_name: :Project

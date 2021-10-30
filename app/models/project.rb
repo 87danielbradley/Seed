@@ -28,8 +28,6 @@ class Project < ApplicationRecord
     validates :goal, presence: true
     validates :risks, presence: true, length: {maximum: 300}
 
-    validates :created_at, presence: true
-    validates :updated_at, presence: true
 
     belongs_to :author,
         foreign_key: :author_id,

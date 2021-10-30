@@ -22,8 +22,6 @@ class Reward < ApplicationRecord
     validates :project_id, presence: true
     validates :shipping_type, presence: true
 
-    validates :created_at, presence: true
-    validates :updated_at, presence: true
 
     belongs_to :project,
         foreign_key: :project_id,

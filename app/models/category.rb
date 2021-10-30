@@ -9,8 +9,6 @@
 #
 class Category < ApplicationRecord
     validates :name, presence: true
-    validates :created_at, presence: true
-    validates :updated_at, presence: true
     
     has_many :projects,
         foreign_key: :category_id,
