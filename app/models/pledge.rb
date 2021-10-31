@@ -3,14 +3,14 @@
 # Table name: pledges
 #
 #  id            :bigint           not null, primary key
-#  pledge_id     :integer          not null
+# -removed- pledge_id     :integer          not null
 #  pledge_amount :float            not null
 #  reward_id     :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #
 class Pledge < ApplicationRecord
-    validates :pledge_id, presence: true
+    
     validates :pledge_amount, presence: true
     validates :reward_id, presence: true
 

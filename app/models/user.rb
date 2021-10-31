@@ -6,12 +6,12 @@
 #  name            :string           not null
 #  email           :string           not null
 #  password_digest :string           not null
-#  create_at       :datetime         not null
-#  updated_at      :datetime         not null
+#  -removed- create_at       :datetime         not null
 #  session_token   :string           not null
 #  location_id     :integer          not null
 #  biography       :string
 #  created_at      :datetime         not null
+#  updated_at      :datetime         not null
 #
 class User < ApplicationRecord
     #FIGVAPER
@@ -26,9 +26,9 @@ class User < ApplicationRecord
     
     after_initialize :ensure_session_token
 
-    belongs_to :location,
-        foreign_key: :location_id,
-        class_name: :Location
+    # belongs_to :location,
+    #     foreign_key: :location_id,
+    #     class_name: :Location
 
     has_many :projects,
         foreign_key: :author_id,
