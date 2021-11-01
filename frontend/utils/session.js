@@ -12,9 +12,9 @@ export const postSession = user => (
         data: {user}
     })
 )
-export const deleteSession = user => (
+export const deleteSession = () => (
     $.ajax({
-        url: '/api/session',
+        url: `/api/session`,
         method: 'DELETE'
     })
 )

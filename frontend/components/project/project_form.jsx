@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { createUser } from "../../actions/session";
 
-class NavBar extends React.Component{
+class ProjectForm extends React.Component{
     constructor(props){
         super(props);
     }
     
     render(){
-        console.log(this.props)
+        
         return(
             <header className="nav-bar">
                 <h1 className="nav-title">SEED</h1>
@@ -33,4 +33,4 @@ class NavBar extends React.Component{
 
 
 
-export default NavBar;
+export default ProjectForm;

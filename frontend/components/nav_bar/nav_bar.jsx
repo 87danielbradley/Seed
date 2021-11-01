@@ -8,7 +8,7 @@ class NavBar extends React.Component{
     }
     
     render(){
-        console.log(this.props)
+        
         return(
             <header className="nav-bar">
                 <h1 className="nav-title">SEED</h1>

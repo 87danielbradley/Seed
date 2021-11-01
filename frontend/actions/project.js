@@ -12,7 +12,7 @@ const receiveProject = (project) => ({
     type: RECEIVE_PROJECT,
     project
 });
-const removeProject = (projectId) => ({
+const delProject = (projectId) => ({
     type: REMOVE_PROJECT,
     projectId
 });
@@ -21,7 +21,7 @@ export const createProject = (projectForm) => dispatch => postProject(projectFor
     .then((project) => dispatch(receiveProject(project)))
 
 export const removeProject = (projectId) => dispatch => deleteProject(projectId)
-    .then(() => dispatch(removeProject(projectId)))
+    .then(() => dispatch(delProject(projectId)))
 
 export const editProject = (projectForm) => dispatch => updateProject(projectForm)
     .then((project) => dispatch(receiveProject(project)))
