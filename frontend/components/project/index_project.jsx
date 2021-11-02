@@ -4,15 +4,18 @@ import ProjectIndexItem from "./index_item_project";
 
 class ProjectIndex extends React.Component{
     componentDidMount(){
+       
         this.props.fetchProjects()
+        
     }
     render(){
+        const {projects, removeProject} = this.props
         return(
             <div>
                 <ul>
-                    {this.props.projects.map(project=>(
-                        <ProjectIndexItem  project={this.props.project}
-                                            removeProject={this.props.removeProject}/>
+                    {projects.map(project=>(
+                        <ProjectIndexItem  project={project}
+                                            removeProject={removeProject}/>
                     ))}
                 </ul>
             </div>

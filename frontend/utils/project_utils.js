@@ -1,35 +1,34 @@
-export const getProjects = data => (
+export const getProjects = ()=> (
     $.ajax({
         url: '/api/projects',
-        method: 'GET',
+        method: 'GET'
         
     })
 )
 // data: {data}
-export const getProject = project_id => (
+export const getProject = projectId => (
     $.ajax({
-        url: `/api/projects/${project_id}`,
-        method: 'GET',
-        data: {project}
+        url: `/api/projects/${projectId}/`,
+        method: 'GET'
     })
 )
 export const postProject = project => (
     $.ajax({
-        url: '/api/projects',
+        url: '/api/projects/',
         method: 'POST',
         data: {project}
     })
 )
 export const updateProject = project => (
     $.ajax({
-        url: `/api/projects/${project.id}`,
+        url: `/api/projects/${project.id}/`,
         method: 'PATCH',
         data: {project}
     })
 )
-export const deleteProject = project_id => (
+export const deleteProject = projectId => (
     $.ajax({
-        url: `/api/projects/${project_id}`,
+        url: `/api/projects/${projectId}`,
         method: 'DELETE'
     })
 )

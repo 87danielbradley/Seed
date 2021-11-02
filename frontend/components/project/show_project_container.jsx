@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchProject } from "../../actions/project";
+import { fetchProject } from "../../actions/project_actions";
 import ProjectShow from './show_project';
 
 
 const mSTP= (state = {}, ownProps) => {
-    debugger
+    
     return {project: state.entities.projects[ownProps.match.params.projectId]}
     
 }

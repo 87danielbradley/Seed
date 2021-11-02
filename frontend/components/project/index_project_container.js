@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchProjects, fetchProject, removeProject } from "../../actions/project";
-import ProjectForm from './project_form';
+import { fetchProjects, fetchProject, removeProject } from "../../actions/project_actions";
+import ProjectIndex from "./index_project";
+
 
 
 const mSTP= (state = {}, ownProps) => ({
@@ -10,9 +11,9 @@ const mSTP= (state = {}, ownProps) => ({
 })
 
 const mDTP = (dispatch, ownProps) => ({
-    fetchProjects: (data) => dispatch(fetchProjects(data)),
+    fetchProjects: () => dispatch(fetchProjects()),
     fetchProject: (projectId) => dispatch(fetchProject(projectId)),
     removeProject: (projectId) => dispatch(removeProject(projectId))
 })
 
-export default connect(mSTP,mDTP)(ProjectForm);
+export default connect(mSTP,mDTP)(ProjectIndex);

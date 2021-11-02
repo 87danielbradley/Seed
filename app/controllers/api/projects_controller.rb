@@ -1,7 +1,7 @@
 class Api::ProjectsController < ApplicationController
     before_action :ensure_logged_in, only: [:create, :destroy, :update]
     def index
-        @projects = Projects.all
+        @projects = Project.all
 
     end
     def show

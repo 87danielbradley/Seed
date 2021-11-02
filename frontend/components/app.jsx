@@ -5,15 +5,19 @@ import LoginContainer from "./session/login_container"
 import EditProjectContainer from "./project/edit_project_container";
 import ShowProjectContainer from "./project/show_project_container";
 import IndexProjectContainer from "./project/index_project_container";
+import CreateProjectContainer from "./project/create_project_container";
 
 import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../utils/route_utils";
+
+
 
 const App = () => (
     <div>
         
         <Route path="/" component={NavBarContainer} />
-        <Route exact path="/" component={IndexProjectContainer} />
+        <Route exact path="/projects" component={IndexProjectContainer} />
+        <Route path="/start" component={CreateProjectContainer} />
         <Route path="/projects/:projectId" component={ShowProjectContainer} />
         <Route path="/projects/:projectId/edit" component={EditProjectContainer} />
         <AuthRoute path="/login" component={LoginContainer} />

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { createUser } from "../../actions/session";
+import CreateProjectContainer from "../project/create_project_container";
+import { createUser } from "../../actions/session_actions";
+
+
 
 class NavBar extends React.Component{
     constructor(props){
@@ -15,7 +18,7 @@ class NavBar extends React.Component{
                 <div>
                     <div>
                     <Link to="/">Discover</Link>
-                    <Link to="/">Start a project</Link>
+                    <Link to="/start" >Start a project</Link>
                     </div>
                     <div>
                     <Link to="/">Search</Link>
