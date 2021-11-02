@@ -24,14 +24,14 @@ class EditProjectForm extends React.Component{
 
 
 const mSTP= (state = {}, ownProps) => ({
-    project: state.projects[ownProps.match.params.projectId],
+    project: state.entities.projects[ownProps.match.params.projectId],
     formType: 'Update Project'
     
 })
 
 const mDTP = (dispatch, ownProps) => ({
     
-    action: (projectId) => dispatch(fetchProject(projectId)),
+    fetchProject: (projectId) => dispatch(fetchProject(projectId)),
     action: (project) => dispatch(editProject(project))
 })
 

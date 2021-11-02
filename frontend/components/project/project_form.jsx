@@ -2,6 +2,7 @@ import React from "react";
 
 class ProjectForm extends React.Component{
     constructor(props){
+        
         super(props);
         this.state = this.props.project;
 
@@ -17,7 +18,7 @@ class ProjectForm extends React.Component{
     }
     
     render(){
-        
+        debugger
         return(
            <div>
                <form onSubmit={this.handleSubmit}>

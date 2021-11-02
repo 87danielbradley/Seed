@@ -2,9 +2,10 @@ export const getProjects = data => (
     $.ajax({
         url: '/api/projects',
         method: 'GET',
-        data: {data}
+        
     })
 )
+// data: {data}
 export const getProject = project_id => (
     $.ajax({
         url: `/api/projects/${project_id}`,
