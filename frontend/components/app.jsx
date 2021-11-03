@@ -17,9 +17,9 @@ const App = () => (
         
         <Route path="/" component={NavBarContainer} />
         <Route exact path="/projects" component={IndexProjectContainer} />
-        <Route path="/start" component={CreateProjectContainer} />
-        <Route path="/projects/:projectId" component={ShowProjectContainer} />
-        <Route path="/projects/:projectId/edit" component={EditProjectContainer} />
+        <ProtectedRoute path="/start" component={CreateProjectContainer} />
+        <Route exact path="/projects/:projectId" component={ShowProjectContainer} />
+        <ProtectedRoute path="/projects/:projectId/edit" component={EditProjectContainer} />
         <AuthRoute path="/login" component={LoginContainer} />
         <AuthRoute path="/signup" component={SignupContainer}/>
         

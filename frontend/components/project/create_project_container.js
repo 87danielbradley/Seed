@@ -6,14 +6,14 @@ import ProjectForm from './project_form';
 
 const mSTP= (state = {}, ownProps) => ({
     project: {
-        authorId: '',
+        author_id: '',
         title: '',
         description: '',
         body: '',
-        categoryId: '',
-        locationId: '',
-        startDate: '',
-        endDate: '',
+        category_id: '',
+        location_id: '',
+        start_date: '',
+        end_date: '',
         goal: '',
         risks: ''
     },
