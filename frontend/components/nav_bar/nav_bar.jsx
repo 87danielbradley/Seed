@@ -13,23 +13,23 @@ class NavBar extends React.Component{
     render(){
         
         return(
-            <header className="nav-bar">
-                <h1 className="nav-title">SEED</h1>
+            
+            <div className="nav-bar">
                 <div>
-                    <div>
-                    <Link to="/">Discover</Link>
-                    <Link to="/start" >Start a project</Link>
-                    </div>
-                    <div>
-                    <Link to="/">Search</Link>
-                    {this.props.currentUser ? (
-                        <button onClick={this.props.logout}>Logout</button>
-                    ):(
-                        <Link className='login-button' to="/login">Log in</Link>
-                    )}
-                    </div>
+                <Link className="nav-link" to="/">Discover</Link>
+                <Link className="nav-link" to="/start" >Start a project</Link>
                 </div>
-            </header>
+                <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED</Link></h1>
+                <div>
+                <Link className="nav-link " to="/">Search <i class="fas fa-search"></i></Link>
+                {this.props.currentUser ? (
+                    <button onClick={this.props.logout}>Logout</button>
+                ):(
+                    <Link className='nav-link login-button' to="/login">Log in</Link>
+                )}
+                </div>
+            </div>
+           
         )
     }
 }
