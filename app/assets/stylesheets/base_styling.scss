@@ -56,5 +56,104 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
 
  }
 
+.session-form-btn{
+    color: blue;
+    border-radius: 50%;
 
+}
+.session-form-window{
+    margin: 0;
+    
+    width: 100%;
+    height:80vh;
+    background: rgb(245, 247, 245);
+}
+.session-form{
+    display: flex;
+    flex-direction: column;
+    
+    background: white;
+    margin: auto;
+    margin: 5% 25% 0% 25%;
 
+    width: 333px;
+    height: 70vh;
+    
+}
+
+.form-session{
+    
+    margin: auto;
+    display:flex;
+    
+    flex-direction: column;
+    
+
+    
+    
+    .form-item {
+        min-height: 40px;
+        margin:auto;
+        height: 40px;
+        width: 262px;
+        // margin: 1vh 0vh 0vh 0vh;
+
+        p{
+            display: block;
+            height: 60px;
+        }
+    }
+
+   
+}
+
+.form-input{
+    color: green;
+}
+.form-input:focus{
+    border: solid;
+    color: darkgreen;
+}
+
+.line-below {
+    border-bottom: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+Link{
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-button{
+    background: #01944b;
+    color: white;
+    border: none;
+}
+
+.form-button:hover{
+    background-color: darkgreen;
+}
+
+.demo-button{
+    background: red;
+    border: none;
+    color: white;
+}
+.demo-button:hover{
+    background: darkred;
+
+}
+
+.error-modal{
+    background: red;
+}

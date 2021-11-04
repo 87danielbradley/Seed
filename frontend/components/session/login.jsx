@@ -22,13 +22,22 @@ class LoginForm extends React.Component{
             .then( () => this.props.history.push('/'))
 
     }
-
+    sessionErrors(){
+        return(
+            <ul>
+                {this.props.errors.map((error,i) => (
+                    <li key={`${error}-${i}`}>{error}</li>
+                ))}
+            </ul>
+        )
+    }
 
 
     render(){
         return (
             <div className="session-form">
                 <h3>Log in</h3>
+                {this.sessionErrors()}
                 <form>
                     <label>Email:
                         <input 
