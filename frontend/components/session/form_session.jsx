@@ -32,11 +32,13 @@ class SessionForm extends React.Component{
     }
     sessionErrors(){
         return(
-            <ul className="error-modal">
+            <ul >
                 {this.props.errors.map((error,i) => (
                     <li key={`${error}-${i}`}>{error}</li>
                 ))}
             </ul>
+           
+            
         )
     }
     
@@ -52,15 +54,17 @@ class SessionForm extends React.Component{
                         </div>: 
                         null
                     }
-                    {this.sessionErrors()}
+                    
                     {this.props.formType === 'Sign up'?
                         <div className="form-item">
                             <h3 className="form-item">{this.props.formType}</h3>
                         </div>: 
                         <div>
                             <h3 className="form-item session-form-title">{this.props.formType}</h3>
+                            {this.sessionErrors()}
                         </div>
                     }
+                    
                     
 
 
