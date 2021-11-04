@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { editProject, fetchProject } from "../../actions/project";
+import { editProject, fetchProject } from "../../actions/project_actions";
 import ProjectForm from './project_form';
 
 
@@ -13,7 +13,7 @@ class EditProjectForm extends React.Component{
     }
 
     render(){
-
+        
         if (!this.props.project) return null;
         return (
             <ProjectForm action={this.props.action} formType={this.props.formType} project={this.props.project} />
@@ -24,14 +24,14 @@ class EditProjectForm extends React.Component{
 
 
 const mSTP= (state = {}, ownProps) => ({
-    project: state.projects[ownProps.match.params.projectId],
+    project: state.entities.projects[ownProps.match.params.projectId],
     formType: 'Update Project'
     
 })
 
 const mDTP = (dispatch, ownProps) => ({
     
-    action: (projectId) => dispatch(fetchProject(projectId)),
+    fetchProject: (projectId) => dispatch(fetchProject(projectId)),
     action: (project) => dispatch(editProject(project))
 })
 

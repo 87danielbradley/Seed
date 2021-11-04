@@ -1,14 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { createProject, editProject, fetchProject, fetchProjects, removeProject } from "./actions/project_actions";
 import Root from "./components/root";
 import configureStore from "./store/store";
-import { postUser, postSession, deleteSession } from "./utils/session";
+import { deleteProject, getProject, getProjects, postProject, updateProject } from "./utils/project_utils";
+
+
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    window.postUser = postUser;
-    window.postSession = postSession;
-    window.deleteSession = deleteSession;
+
     const root = document.getElementById('root')
+
+    window.createProject = createProject
+    window.editProject = editProject
+    window.fetchProject = fetchProject
+    window.fetchProjects = fetchProjects
+    window.removeProject = removeProject
+
+    window.postProject = postProject
+    window.updateProject = updateProject
+    window.getProject = getProject
+    window.getProjects = getProjects
+    window.deleteProject = deleteProject
+
+
 
     let preloadedState = undefined;
     if (window.currentUser) {
@@ -19,5 +34,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         };
     }
     const store = configureStore(preloadedState)
+    window.store = store
     ReactDOM.render(<Root store={store}/>, root)
 })

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { createUser } from "../../actions/session";
+import CreateProjectContainer from "../project/create_project_container";
+import { createUser } from "../../actions/session_actions";
+
+
 
 class NavBar extends React.Component{
     constructor(props){
@@ -10,23 +13,23 @@ class NavBar extends React.Component{
     render(){
         
         return(
-            <header className="nav-bar">
-                <h1 className="nav-title">SEED</h1>
+            
+            <div className="nav-bar">
                 <div>
-                    <div>
-                    <Link to="/">Discover</Link>
-                    <Link to="/">Start a project</Link>
-                    </div>
-                    <div>
-                    <Link to="/">Search</Link>
-                    {this.props.currentUser ? (
-                        <button onClick={this.props.logout}>Logout</button>
-                    ):(
-                        <Link className='login-button' to="/login">Log in</Link>
-                    )}
-                    </div>
+                <Link className="nav-link" to="/">Discover</Link>
+                <Link className="nav-link" to="/start" >Start a project</Link>
                 </div>
-            </header>
+                <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED</Link></h1>
+                <div>
+                <Link className="nav-link " to="/">Search <i className="fas fa-search"></i></Link>
+                {this.props.currentUser ? (
+                    <button onClick={this.props.logout}>Logout</button>
+                ):(
+                    <Link className='nav-link login-button' to="/login">Log in</Link>
+                )}
+                </div>
+            </div>
+           
         )
     }
 }

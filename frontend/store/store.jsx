@@ -10,8 +10,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 
-const configureStore = (state={}) => (
-    createStore(RootReducer, state, applyMiddleware(...middlewares))
+const configureStore = (preloadedState={}) => (
+    createStore(RootReducer, preloadedState, applyMiddleware(...middlewares))
 );
 
 
