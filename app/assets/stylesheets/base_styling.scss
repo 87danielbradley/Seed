@@ -279,13 +279,20 @@ a {
 
 .home-med-container-left{
     background: green;
-    width: 60vw;
+    width: 54.3vw;
     height: 80vh;
+    border-bottom: solid;
+    border-color: lightgrey;
+    border-width: 1px;
 }
 .home-med-container-right{
     background: orange;
-    width: 40vw;
+    width: 45.7vw;
     height: 80vh;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: lightgrey;
+    border-width: 1px;
 }
 
 .home-main{
@@ -298,4 +305,20 @@ a {
         font-size: 5vh;
         margin-bottom: 3vh;
     }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  .home-large-container{
+      flex-direction: column;
+      .home-med-container-left{
+          width: 100vw;
+      }
+      .home-med-container-right{
+          width: 100vw;
+      }
+  }
+
+
 }
