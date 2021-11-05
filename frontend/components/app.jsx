@@ -11,12 +11,14 @@ import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../utils/route_utils";
 import DefaultContainer from "./default/default_container";
 import HomeContainer from "./home/home_container";
-
+import CategoryBarContainer from "./category_bar/category_bar_container";
 
 const App = () => (
     <div>
         
         <Route path="/" component={NavBarContainer} />
+        <Route exact path="/" component={CategoryBarContainer} />
+
         <Switch>
             <Route exact path="/" component={HomeContainer} />
             <ProtectedRoute path="/projects/:projectId/edit" component={EditProjectContainer} />
@@ -28,6 +30,7 @@ const App = () => (
             <Route path="/:default" component={DefaultContainer} />
         </Switch>
         
+        <Route path="/" component={CategoryBarContainer} />
         
     </div>
 );

@@ -14,7 +14,7 @@ class ProjectShow extends React.Component{
         // console.log('state','projectShow', this.props)
         // console.log(this.state)
         const {project} = this.props
-        
+        debugger
         return [
            
             (typeof project !== 'undefined') ? (<div>
