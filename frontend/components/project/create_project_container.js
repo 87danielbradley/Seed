@@ -4,9 +4,10 @@ import { createProject } from "../../actions/project_actions";
 import ProjectForm from './project_form';
 
 
-const mSTP= (state = {}, ownProps) => ({
-    project: {
-        author_id: '',
+const mSTP= (state = {}, ownProps) => {
+   
+    return {project: {
+        author_id: `${state.session.currentUser.id}`,
         title: '',
         description: '',
         body: '',
@@ -17,9 +18,9 @@ const mSTP= (state = {}, ownProps) => ({
         goal: '',
         risks: ''
     },
-    formType: 'Create Project'
+    formType: 'Create Project'}
     
-});
+};
 
 const mDTP = (dispatch, ownProps) => ({
     action: (project) => dispatch(createProject(project))
