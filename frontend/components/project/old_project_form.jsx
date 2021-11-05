@@ -18,7 +18,7 @@ class ProjectForm extends React.Component{
     }
     
     render(){
-        debugger
+        
         return(
            <div className="project-form-container">
                <form className="project-form" onSubmit={this.handleSubmit}>

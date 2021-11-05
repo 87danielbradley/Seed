@@ -5,7 +5,7 @@ import ProjectForm from './project_form';
 
 
 const mSTP= (state = {}, ownProps) => {
-    debugger
+   
     return {project: {
         author_id: `${state.session.currentUser.id}`,
         title: '',

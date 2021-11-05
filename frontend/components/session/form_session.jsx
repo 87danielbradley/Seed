@@ -12,6 +12,9 @@ class SessionForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this)
     }
+    componentDidMount(){
+        this.props.resetErrors()
+    }
     update(field){
         return (event) => {
             this.setState({[field]: event.currentTarget.value})
@@ -61,9 +64,9 @@ class SessionForm extends React.Component{
                         </div>: 
                         <div>
                             <h3 className="form-item session-form-title">{this.props.formType}</h3>
-                            {this.sessionErrors()}
                         </div>
                     }
+                    {this.sessionErrors()}
                     
                     
 
