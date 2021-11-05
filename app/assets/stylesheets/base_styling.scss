@@ -157,3 +157,81 @@ a {
 .error-modal{
     background: red;
 }
+
+.project-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.project-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: auto;
+}
+.project-form-item{
+    height: 40px;
+    min-height: 40px;
+    width: 500px;
+}
+
+.large-form-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
+}
+.large-form-box-title{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    *{
+        margin: auto;
+    }
+}
+.large-form-box-body{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
+    
+}
+
+.small-form-box{
+    display: flex;
+    flex-direction: column;
+    
+    width: 25vw;
+}
+
+.small-form-box-left{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 23vw;
+}
+.small-form-box-right{
+    display: flex;
+    flex-direction: column;
+    
+    width: 45vw;
+}
+
+.xsmall-form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    margin: 5px;
+
+}

@@ -9,19 +9,24 @@ import CreateProjectContainer from "./project/create_project_container";
 
 import { Route, Switch } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../utils/route_utils";
-
+import DefaultContainer from "./default/default_container";
+import HomeContainer from "./home/home_container";
 
 
 const App = () => (
     <div>
         
         <Route path="/" component={NavBarContainer} />
-        <Route exact path="/projects" component={IndexProjectContainer} />
-        <ProtectedRoute path="/start" component={CreateProjectContainer} />
-        <Route exact path="/projects/:projectId" component={ShowProjectContainer} />
-        <ProtectedRoute path="/projects/:projectId/edit" component={EditProjectContainer} />
-        <AuthRoute path="/login" component={LoginContainer} />
-        <AuthRoute path="/signup" component={SignupContainer}/>
+        <switch>
+            <Route exact path="/" component={HomeContainer} />
+            <ProtectedRoute path="/projects/:projectId/edit" component={EditProjectContainer} />
+            <Route exact path="/projects/:projectId" component={ShowProjectContainer} />
+            <Route exact path="/projects" component={IndexProjectContainer} />
+            <ProtectedRoute path="/start" component={CreateProjectContainer} />
+            <AuthRoute path="/login" component={LoginContainer} />
+            <AuthRoute path="/signup" component={SignupContainer}/>
+            <Route path="/:default" component={DefaultContainer} />
+        </switch>
         
         
     </div>

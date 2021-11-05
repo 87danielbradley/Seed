@@ -17,12 +17,17 @@ const receiveSessionErrors = (errors) => ({
 
 export const createUser = (formUser) => dispatch => postUser(formUser)
     .then((user) => dispatch(receiveCurrentUser(user)),
-    error => dispatch(receiveSessionErrors(error.responseJSON))
+    error => {
+        debugger
+        // return dispatch(receiveSessionErrors(error.responseJSON))}
+        return dispatch(receiveSessionErrors(error.responseText))}
     );
 
 export const login = (formUser) => dispatch => postSession(formUser)
     .then((user) => dispatch(receiveCurrentUser(user)),
-    error => dispatch(receiveSessionErrors(error.responseJSON))
+    error => {
+        debugger
+        return dispatch(receiveSessionErrors(error.responseJSON))}
     );
 
 export const logout = () => dispatch => deleteSession()

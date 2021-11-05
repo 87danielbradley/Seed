@@ -8,7 +8,7 @@ import SignupForm from './signup'
 
 const mSTP = (state = {}, ownProps) => {
      return {
-        errors: state.errors.signup,
+        errors: state.errors.login,
         navLink: <Link to={'/login'}>Log in</Link>,
         formType: 'Sign up'
     }
