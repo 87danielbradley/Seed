@@ -70,6 +70,7 @@ class SessionForm extends React.Component{
 
                     <form className="form-session">
                     {this.props.formType === 'Sign up'?
+                            <div className="form-item">
                             <input 
                                 type="text"
                                 className="form-item form-input"
@@ -77,8 +78,9 @@ class SessionForm extends React.Component{
                                 value={this.state.name}
                                 onChange={this.update('name')}
                             />
+                            </div>
                         : null}
-                        
+                        <div className="form-item">
                         <input 
                             type="text"
                             className="form-item form-input"
@@ -86,8 +88,9 @@ class SessionForm extends React.Component{
                             value={this.state.email}
                             onChange={this.update('email')}
                         />
+                        </div>
                         
-                        
+                        <div className="form-item">
                         <input 
                             type="password"
                             placeholder="Password"
@@ -95,12 +98,15 @@ class SessionForm extends React.Component{
                             value={this.state.password}
                             onChange={this.update('password')}
                         />
+                        </div>
                         
-                        {this.props.formType === 'Sign up'?<div className="display-flex"><label className="form-item">
+                        {this.props.formType === 'Sign up'?<div className="form-item display-flex">
+                            
+                            <label className="form-item">
                             <input 
                                 type="checkbox"
                             />Send me a weekly mix of handpicked projects, plus occasional SeedBed news
-                        </label> 
+                            </label> 
                         <label className="form-item">
                             <input 
                                 type="checkbox"
@@ -119,8 +125,8 @@ class SessionForm extends React.Component{
                         </div>
                         </div>}
                         
-                        {this.props.formType === 'Sign up'?<button className="form-button form-item session-form-submit" onClick={this.handleSubmit} value={this.props.formType}>Create account</button>:<button className="form-button form-item session-form-submit" onClick={this.handleSubmit} value={this.props.formType}>{this.props.formType}</button> }
-                        {<button className="form-item demo-button" onClick={this.demoUser} value={'Demo User'}>Demo User</button>}
+                        {this.props.formType === 'Sign up'?<button className="form-button form-item session-form-submit translatey-med" onClick={this.handleSubmit} value={this.props.formType}>Create account</button>:<button className="form-button form-item session-form-submit" onClick={this.handleSubmit} value={this.props.formType}>{this.props.formType}</button> }
+                        {<button className="form-item demo-button translatey-med" onClick={this.demoUser} value={'Demo User'}>Demo User</button>}
                         
                     </form>
                 </div>

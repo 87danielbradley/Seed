@@ -35,7 +35,7 @@ Potential backers will also see them if your project appears on category pages, 
                         </div>
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <label className="project-form-item" for="project-form-title">Title
+                                <label className="project-form-item" htmlFor="project-form-title">Title
                                 </label>
                                 <input 
                                     id="project-form-title"
@@ -46,7 +46,7 @@ Potential backers will also see them if your project appears on category pages, 
                                 />
                             </div>
                             <div className="xsmall-form-box">
-                                <label className="project-form-item" for="project-form-description">Subtitle
+                                <label className="project-form-item" htmlFor="project-form-description">Subtitle
                                 </label>
                                 <textarea
                                     placeholder="Explore the world around you with virtual rose tinted glasses."
@@ -152,7 +152,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
 
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <label className="project-form-item" for="project-form-goal">Goal Amount
+                                <label className="project-form-item" htmlFor="project-form-goal">Goal Amount
                                 </label>
                                 <input 
                                     id="project-form-goal"
@@ -175,7 +175,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
 
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <label className="project-form-item" for="project-form-start">Start Date
+                                <label className="project-form-item" htmlFor="project-form-start">Start Date
                                 </label>
                                 <input 
                                     id="project-form-start"
@@ -208,7 +208,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
 
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <label className="project-form-item" for="project-form-end">End Date
+                                <label className="project-form-item" htmlFor="project-form-end">End Date
                                 </label>
                                 <input 
                                     id="project-form-end"
@@ -251,7 +251,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
 
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <label className="project-form-item" for="project-form-risks">Risks
+                                <label className="project-form-item" htmlFor="project-form-risks">Risks
                                 </label>
                                 <textarea
                                     id="project-form-risk"

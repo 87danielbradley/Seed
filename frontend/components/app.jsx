@@ -17,7 +17,7 @@ const App = () => (
     <div>
         
         <Route path="/" component={NavBarContainer} />
-        <switch>
+        <Switch>
             <Route exact path="/" component={HomeContainer} />
             <ProtectedRoute path="/projects/:projectId/edit" component={EditProjectContainer} />
             <Route exact path="/projects/:projectId" component={ShowProjectContainer} />
@@ -26,7 +26,7 @@ const App = () => (
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer}/>
             <Route path="/:default" component={DefaultContainer} />
-        </switch>
+        </Switch>
         
         
     </div>
