@@ -11,11 +11,18 @@ class HomeView extends React.Component{
     render(){
         
         return(
-            
-            <div>
+            <div className="home-main">
+            <h1>Creative work shows us what’s possible.</h1><h1>
+Help fund it here.</h1>
+            <div className="home-large-container">
                 
-                <div>This is the Homepage
+                <div className="home-med-container-left">FEATURED PROJECT
                 </div>
+                
+                <div className="home-med-container-right">RECOMMENDED FOR YOU
+                </div>
+                
+            </div>
             </div>
            
         )

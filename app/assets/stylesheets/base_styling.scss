@@ -271,3 +271,31 @@ a {
         transform: translate(2,1);
     }
 }
+
+.home-large-container{
+    display: flex;
+    background: red;
+}
+
+.home-med-container-left{
+    background: green;
+    width: 60vw;
+    height: 80vh;
+}
+.home-med-container-right{
+    background: orange;
+    width: 40vw;
+    height: 80vh;
+}
+
+.home-main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1{
+        margin: auto;
+        font-size: 5vh;
+        margin-bottom: 3vh;
+    }
+}
