@@ -235,3 +235,39 @@ a {
     margin: 5px;
 
 }
+
+.default-container{
+    display: flex;
+
+    h1{
+        font-size:xx-large;
+    }
+    p{
+    
+    }
+
+}
+
+.default-small-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 10px;
+    *{
+        margin: 5px;
+    }
+}
+
+.default-404{
+    font-size: 40vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: fantasy;
+    box-shadow:mediumturquoise;
+    color: $green;
+    
+    &:hover{
+        color: darkgreen;
+        font-size: 39vw;
+        transform: translate(2,1);
+    }
+}
