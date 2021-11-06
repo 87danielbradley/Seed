@@ -342,27 +342,69 @@ a {
         }
     }
 }
-@media only screen and (max-width: 1000px) {
-  .large-form-box{
-    flex-direction: column;
+.discover-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: center;
+    .discover-container{
+        display:flex;
+        flex-direction: column;
+        
+        
+        
+        .discover-photo{
+            width: 27vw;
+            height: 15.71vw;
+            background: lightsalmon;
+        }
+        .discover-body{
+            width: 27vw;
+            height: 180px;
+            background: lightskyblue;
+        }
+        .discover-stats{
+            width: 27vw;
+            height: 147px;
+            background: lightsteelblue;
+        }
+    }
 }
-.large-form-box-title{
- 
+
+@media only screen and (min-width: 360px) and (max-width: 600px) {
+    
+    .discover-main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4vw;
+        justify-content: center;
+        .discover-container{
+            display:flex;
+            flex-direction: column;
+            
+            
+            
+            .discover-photo{
+                width: 91.5vw;
+                height: 51.6vw;
+                background: lightsalmon;
+            }
+            .discover-body{
+                width: 91.5vw;
+                height: 180px;
+                background: lightskyblue;
+            }
+            .discover-stats{
+                width: 91.5vw;
+                height: 147px;
+                background: lightsteelblue;
+            }
+        }
+    }
+
 }
-.large-form-box-body{
-}
-.small-form-box{
-   width: 25vw;
-}
-.small-form-box-left{
-    width: 80vw;
-}
-.small-form-box-right{
-    width: 80vw;
-}
-.xsmall-form-box{
-}
-}
+
+
 @media only screen and (max-width: 800px) {
   .home-large-container{
       flex-direction: column;
@@ -395,8 +437,60 @@ a {
     }
 
 }
-@media only screen and (max-width: 600px) {
-  
+
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .large-form-box{
+    flex-direction: column;
+}
+.large-form-box-title{
+ 
+}
+.large-form-box-body{
+}
+.small-form-box{
+   width: 25vw;
+}
+.small-form-box-left{
+    width: 80vw;
+}
+.small-form-box-right{
+    width: 80vw;
+}
+.xsmall-form-box{
+}
+
+.discover-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: center;
+    .discover-container{
+        display:flex;
+        flex-direction: column;
+        
+        
+        
+        .discover-photo{
+            width: 42.6vw;
+            height: 24vw;
+            background: lightsalmon;
+        }
+        .discover-body{
+            width: 42.6vw;
+            height: 180px;
+            background: lightskyblue;
+        }
+        .discover-stats{
+            width: 42.6vw;
+            height: 147px;
+            background: lightsteelblue;
+        }
+    }
+}
 
 
 }
