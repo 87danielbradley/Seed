@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Modak&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+ 
+$green: rgb(0, 200, 100);
+$black: rgb(17, 16, 16);
+
+
+
+$nav-font :'Manrope', sans-serif;
+$seed-font :'Modak', cursive;
+$body-font :'Zen Kaku Gothic Antique', sans-serif;
+ 
+
+
+.discover-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: center;
+    .discover-container{
+        display:flex;
+        flex-direction: column;
+        
+        
+        
+        .discover-photo{
+            width: 27vw;
+            height: 15.71vw;
+            background: lightsalmon;
+        }
+        .discover-body{
+            width: 27vw;
+            height: 180px;
+            background: lightskyblue;
+        }
+        .discover-stats{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 27vw;
+            height: 147px;
+            background: lightsteelblue;
+
+            .discover-links{
+                display: flex;
+                gap: 15px;
+                text-decoration: underline;
+                color: black;
+            }
+            .discover-link{
+                color: black;
+
+                &:hover{
+                    font-weight: bold;
+                }
+            }
+        }
+        .progress-container{
+            margin: auto;
+            width: 90%;
+            height: 5px;
+            background: lightgrey;
+            max-width: 100%;
+
+
+            .progress-bar{
+            
+                height: 5px;
+                background: darkgreen;
+                max-width: 100%;
+
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+    
+    .discover-main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4vw;
+        justify-content: center;
+        .discover-container{
+            display:flex;
+            flex-direction: column;
+            
+            
+            
+            .discover-photo{
+                width: 91.5vw;
+                height: 51.6vw;
+                background: lightsalmon;
+            }
+            .discover-body{
+                width: 91.5vw;
+                height: 180px;
+                background: lightskyblue;
+            }
+            .discover-stats{
+                width: 91.5vw;
+                height: 147px;
+                background: lightsteelblue;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+ 
+.discover-main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4vw;
+    justify-content: center;
+    .discover-container{
+        display:flex;
+        flex-direction: column;
+        
+        
+        
+        .discover-photo{
+            width: 42.6vw;
+            height: 24vw;
+            background: lightsalmon;
+        }
+        .discover-body{
+            width: 42.6vw;
+            height: 180px;
+            background: lightskyblue;
+        }
+        .discover-stats{
+            width: 42.6vw;
+            height: 147px;
+            background: lightsteelblue;
+        }
+    }
+}
+
+
+}

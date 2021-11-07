@@ -4,7 +4,7 @@ import DiscoverItem from "./discover_item";
 
 class DiscoverView extends React.Component{
      componentDidMount(){
-       debugger
+       
         this.props.fetchProjects({category: this.props.match.params.categoryId})
         
     }
