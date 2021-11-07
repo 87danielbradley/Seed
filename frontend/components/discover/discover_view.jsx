@@ -15,7 +15,7 @@ class DiscoverView extends React.Component{
         return(
             <div className="discover-main">
                 
-                {projects.map(project=>(
+                {projects.slice(0,12).map(project=>(
                     <DiscoverItem  key={`project${project.id}`} project={project}
                                         removeProject={removeProject}/>
                 ))}

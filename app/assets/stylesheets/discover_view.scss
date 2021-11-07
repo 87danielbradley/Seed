@@ -67,7 +67,7 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
             }
             .discover-link{
                 color: black;
-
+                text-decoration: underline;
                 &:hover{
                     font-weight: bold;
                 }
