@@ -13,6 +13,8 @@ class DiscoverView extends React.Component{
         
         const {projects, removeProject} = this.props
         return(
+            <div>
+                <h1 className="discover-title">Explore <span className="discover-green">{this.props.projects.length} projects</span></h1>
             <div className="discover-main">
                 
                 {projects.slice(0,12).map(project=>(
@@ -20,6 +22,7 @@ class DiscoverView extends React.Component{
                                         removeProject={removeProject}/>
                 ))}
                 
+            </div>
             </div>
            
         )

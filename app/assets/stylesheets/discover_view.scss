@@ -95,6 +95,18 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
     }
 }
 
+.discover-title{
+    color: black;
+    font-size: x-large;
+    margin: 20px;
+    margin-left: 5vw;
+    .discover-green{
+        color: darkgreen;
+        font-weight: 900;
+    }
+}
+
+
 @media only screen and (min-width: 1px) and (max-width: 600px) {
     
     .discover-main{
