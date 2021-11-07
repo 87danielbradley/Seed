@@ -39,6 +39,7 @@ Potential backers will also see them if your project appears on category pages, 
                                 </label>
                                 <input 
                                     id="project-form-title"
+                                    className="project-form-item"
                                     placeholder="The Next Generation Pay to Win Game"
                                     type="text"
                                     value={this.state.title}
@@ -51,6 +52,7 @@ Potential backers will also see them if your project appears on category pages, 
                                 <textarea
                                     placeholder="Explore the world around you with virtual rose tinted glasses."
                                     id="project-form-description"
+                                    className="project-form-item"
                                     value={this.state.description}
                                     onChange={this.update('description')}
                                 />
@@ -156,6 +158,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                                 </label>
                                 <input 
                                     id="project-form-goal"
+                                    className="project-form-item"
                                     placeholder="0"
                                     type="text"
                                     value={this.state.goal}
@@ -179,6 +182,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                                 </label>
                                 <input 
                                     id="project-form-start"
+                                    className="project-form-item"
                                     placeholder="MM-DD-YYYY"
                                     type="text"
                                     value={this.state.startDate}
@@ -212,6 +216,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                                 </label>
                                 <input 
                                     id="project-form-end"
+                                    className="project-form-item"
                                     placeholder="MM-DD-YYYY"
                                     type="text"
                                     value={this.state.endDate}
@@ -227,8 +232,8 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                     <div className="large-form-box-body">
 
                         <div className="small-form-box-left">
-                            <h3>Project description</h3>
-                            <p>Describe what you're raising funds to do, why you care about it, how you plan to make it happen, and who you are. Your description should tell backers everything they need to know. If possible, include images to show them what your project is all about and what rewards look like.</p>
+                            <h3 className="project-form-description">Project description</h3>
+                            <p className="project-form-description">Describe what you're raising funds to do, why you care about it, how you plan to make it happen, and who you are. Your description should tell backers everything they need to know. If possible, include images to show them what your project is all about and what rewards look like.</p>
                         
                         </div>
                         <textarea
@@ -255,6 +260,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                                 </label>
                                 <textarea
                                     id="project-form-risk"
+                                    className="project-form-item"
                                     placeholder="Common risks and challenges you may want to address include budgeting, timelines for rewards and the project itself, the size of your audience..."
                                     value={this.state.risks}
                                     onChange={this.update('risks')}
@@ -269,7 +275,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                 
                    
                    
-                <button type="submit" value={this.props.formType}>Create Project</button>
+                <button className="project-form-submit" type="submit" value={this.props.formType}>Create Project</button>
                </form>
            </div>
         )
