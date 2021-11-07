@@ -6,12 +6,13 @@ import ProjectIndex from "./index_project";
 
 
 const mSTP= (state = {}, ownProps) => ({
-    projects: Object.values(state.entities.projects)
+    projects: Object.values(state.entities.projects),
+    currentUser: state.session.currentUser
     
 })
 
 const mDTP = (dispatch, ownProps) => ({
-    fetchProjects: () => dispatch(fetchProjects()),
+    fetchProjects: (data) => dispatch(fetchProjects(data)),
     fetchProject: (projectId) => dispatch(fetchProject(projectId)),
     removeProject: (projectId) => dispatch(removeProject(projectId))
 })

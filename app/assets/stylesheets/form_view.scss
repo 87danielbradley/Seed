@@ -1,0 +1,185 @@
+
+
+.form-input{
+    color: green;
+}
+.form-input:focus{
+    border: solid;
+    color: darkgreen;
+}
+
+.line-below {
+    border-bottom: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+}
+
+.display-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+Link{
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-button{
+    background: #01944b;
+    color: white;
+    border: none;
+}
+
+.form-button:hover{
+    background-color: darkgreen;
+}
+
+.demo-button{
+    background: red;
+    border: none;
+    color: white;
+}
+.demo-button:hover{
+    background: darkred;
+
+}
+
+.error-modal{
+    background: red;
+}
+
+.project-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+.project-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: auto;
+}
+.project-form-item{
+    height: 40px;
+    min-height: 40px;
+    width: 500px;
+}
+
+.large-form-box{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
+}
+.large-form-box-title{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    *{
+        margin: auto;
+    }
+}
+.large-form-box-body{
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-around;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
+    
+}
+
+.small-form-box{
+    display: flex;
+    flex-direction: column;
+    
+    width: 25vw;
+}
+
+.small-form-box-left{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 5%;
+    width: 23vw;
+}
+.small-form-box-right{
+    display: flex;
+    flex-direction: column;
+    
+    width: 45vw;
+}
+
+.xsmall-form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    
+    margin: 5px;
+
+}
+
+
+.translatey-med{
+    transform: translateY(5vh);
+}
+
+
+@media only screen and (max-width: 800px) {
+ 
+
+   .large-form-box{
+    flex-direction: column;
+    }
+    .large-form-box-title{
+    
+    }
+    .large-form-box-body{
+    }
+    .small-form-box{
+    width: 25vw;
+    }
+    .small-form-box-left{
+        display:none;
+    }
+    .small-form-box-right{
+        width: 80vw;
+    }
+    .xsmall-form-box{
+    }
+
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .large-form-box{
+    flex-direction: column;
+}
+.large-form-box-title{
+ 
+}
+.large-form-box-body{
+}
+.small-form-box{
+   width: 25vw;
+}
+.small-form-box-left{
+    width: 80vw;
+}
+.small-form-box-right{
+    width: 80vw;
+}
+.xsmall-form-box{
+}
+
+}

@@ -1,7 +1,8 @@
-export const getProjects = ()=> (
+export const getProjects = (category)=> (
     $.ajax({
         url: '/api/projects',
-        method: 'GET'
+        method: 'GET',
+        category
         
     })
 )

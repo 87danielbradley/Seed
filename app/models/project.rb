@@ -50,7 +50,20 @@ class Project < ApplicationRecord
         class_name: :Faq
 
 
+    def self.in_category(category)
+        self.where(category_id: category)
+        
+    end
 
+    def pledged
+        # Project.sum(rewards.pledge_amount)
+        total = 0
+        rewards.each do |reward|
+            total += reward.pledged
+        end
+        return total
+        
+    end
 
 
 end

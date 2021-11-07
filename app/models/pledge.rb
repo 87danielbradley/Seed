@@ -22,4 +22,7 @@ class Pledge < ApplicationRecord
     belongs_to :reward,
         foreign_key: :reward_id,
         class_name: :Reward
+
+    
+    
 end

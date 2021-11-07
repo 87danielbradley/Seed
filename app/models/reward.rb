@@ -31,4 +31,12 @@ class Reward < ApplicationRecord
         foreign_key: :reward_id,
         class_name: :Pledge
     
+    def pledged
+        total = 0
+        pledges.each do |pledge|
+            total += pledge.pledge_amount
+        end
+        return total
+    end
+
 end

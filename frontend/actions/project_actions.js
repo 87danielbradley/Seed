@@ -17,7 +17,7 @@ const delProject = (projectId) => ({
     projectId
 });
 
-export const fetchProjects = () => dispatch => getProjects()
+export const fetchProjects = (data) => dispatch => getProjects(data)
     .then((projects) => dispatch(receiveProjects(projects)))
 
 export const fetchProject = (projectId) => dispatch => getProject(projectId)

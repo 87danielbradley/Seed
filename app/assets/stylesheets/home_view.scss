@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Modak&family=Zen+Kaku+Gothic+Antique&display=swap');
+
+ 
+$green: rgb(0, 200, 100);
+$black: rgb(17, 16, 16);
+
+
+
+$nav-font :'Manrope', sans-serif;
+$seed-font :'Modak', cursive;
+$body-font :'Zen Kaku Gothic Antique', sans-serif;
+
+
+.home-large-container{
+    display: flex;
+    background: red;
+}
+
+.home-med-container-left{
+    background: green;
+    width: 54.3vw;
+    height: 80vh;
+    border-bottom: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+}
+.home-med-container-right{
+    background: orange;
+    width: 45.7vw;
+    height: 80vh;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+}
+
+.home-main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1{
+        margin: auto;
+        font-size: 5vh;
+        margin-bottom: 3vh;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  .home-large-container{
+      flex-direction: column;
+      .home-med-container-left{
+          width: 100vw;
+      }
+      .home-med-container-right{
+          width: 100vw;
+      }
+  }
+
+   .large-form-box{
+    flex-direction: column;
+    }
+    .large-form-box-title{
+    
+    }
+    .large-form-box-body{
+    }
+    .small-form-box{
+    width: 25vw;
+    }
+    .small-form-box-left{
+        display:none;
+    }
+    .small-form-box-right{
+        width: 80vw;
+    }
+    .xsmall-form-box{
+    }
+
+}
+
+

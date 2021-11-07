@@ -7,14 +7,13 @@ class ProjectShow extends React.Component{
         this.props.fetchProject(this.props.match.params.projectId)
     }
     componentDidUpdate(){
-        // console.log('test')
+        console.log('test')
     }
-    
     render(){
-        // console.log('state','projectShow', this.props)
-        // console.log(this.state)
+        console.log('state','projectShow', this.props)
+        console.log(this.state)
         const {project} = this.props
-        debugger
+        
         return [
            
             (typeof project !== 'undefined') ? (<div>

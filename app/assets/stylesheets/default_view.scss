@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Modak&family=Zen+Kaku+Gothic+Antique&display=swap');
+$green: rgb(0, 200, 100);
+$black: rgb(17, 16, 16);
+
+
+
+$nav-font :'Manrope', sans-serif;
+$seed-font :'Modak', cursive;
+$body-font :'Zen Kaku Gothic Antique', sans-serif;
+
+
+.default-container{
+    display: flex;
+
+    h1{
+        font-size:xx-large;
+    }
+    p{
+    
+    }
+
+}
+
+.default-small-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 10px;
+    *{
+        margin: 5px;
+    }
+}
+
+.default-404{
+    font-size: 40vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: fantasy;
+    box-shadow:mediumturquoise;
+    color: $green;
+    
+    &:hover{
+        color: darkgreen;
+        font-size: 39vw;
+        transform: translate(2,1);
+    }
+}
+ 

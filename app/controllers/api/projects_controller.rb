@@ -1,7 +1,12 @@
 class Api::ProjectsController < ApplicationController
     before_action :ensure_logged_in, only: [:create, :destroy, :update]
     def index
-        @projects = Project.all
+        # @projects = category ? Project.in_category(category) : Project.all
+        puts(`The category is ${category}`)
+        @projects = category ? Project.first(2) : Project.all
+        @myParams = params
+        @myCat = params[:category]
+        
 
     end
     def show
@@ -39,6 +44,10 @@ class Api::ProjectsController < ApplicationController
     private
     def project_params
         params.require(:project).permit(:author_id, :title, :description, :body, :category_id, :location_id, :start_date, :end_date, :goal, :risks)
+    end
+
+    def category
+        params[:category]
     end
 
 

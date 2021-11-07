@@ -29,6 +29,7 @@ const App = () => (
             <ProtectedRoute path="/start" component={CreateProjectContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer}/>
+            <Route path="/discover/:categoryId" component={DiscoverContainer}/>
             <Route path="/discover" component={DiscoverContainer}/>
             <Route path="/:default" component={DefaultContainer} />
         </Switch>
