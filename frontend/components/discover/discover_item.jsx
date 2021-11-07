@@ -16,7 +16,7 @@ class DiscoverItem extends React.Component{
                 </div>
                 <div className="discover-stats">
                     <div className="progress-container"><div className="progress-bar" style={{width: `${Number(100*this.props.project.pledged_amt/this.props.project.goal).toFixed(0)}%`}}></div></div>
-                    <h3>{this.props.project.pledged_amt}</h3>
+                    <h3>{`$${this.props.project.pledged_amt}`}</h3>
                     <h3>{`${Number(100*this.props.project.pledged_amt/this.props.project.goal).toFixed(0)}% funded`}</h3>
                     <h3>{`${Math.ceil(((new Date(this.props.project.end_date.split('T')[0]))-(new Date()))/(1000 * 3600 * 24))} days to go`}</h3>
 

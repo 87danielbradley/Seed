@@ -20,6 +20,9 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
     .discover-container{
         display:flex;
         flex-direction: column;
+        outline: solid;
+        outline-width: 1px;
+        outline-color: lightgrey;
         
         
         
@@ -29,9 +32,18 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
             background: lightsalmon;
         }
         .discover-body{
+            display: flex;
+            flex-direction: column;
             width: 27vw;
             height: 180px;
-            background: lightskyblue;
+            
+            gap: 15px;
+            *{
+                margin-left: 10px;
+            }
+            :first-child{
+                margin-top: 5px;
+            }
         }
         .discover-stats{
             display: flex;
@@ -39,8 +51,14 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
             justify-content: space-evenly;
             width: 27vw;
             height: 147px;
-            background: lightsteelblue;
-
+            
+            gap: 15px;
+            :last-child{
+                margin-bottom: 10px;
+            }
+            *{
+                margin-left: 10px;
+            }
             .discover-links{
                 display: flex;
                 gap: 15px;
@@ -56,15 +74,18 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
             }
         }
         .progress-container{
-            margin: auto;
+            display: flex;
+            justify-content: start;
+            
             width: 90%;
             height: 5px;
             background: lightgrey;
-            max-width: 100%;
+            max-width: 90%;
+            min-width: 90%;
 
 
             .progress-bar{
-            
+                margin-left: 0px;
                 height: 5px;
                 background: darkgreen;
                 max-width: 100%;
@@ -90,17 +111,17 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
             .discover-photo{
                 width: 91.5vw;
                 height: 51.6vw;
-                background: lightsalmon;
+                
             }
             .discover-body{
                 width: 91.5vw;
                 height: 180px;
-                background: lightskyblue;
+                
             }
             .discover-stats{
                 width: 91.5vw;
                 height: 147px;
-                background: lightsteelblue;
+                
             }
         }
 
@@ -131,17 +152,17 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
         .discover-photo{
             width: 42.6vw;
             height: 24vw;
-            background: lightsalmon;
+            
         }
         .discover-body{
             width: 42.6vw;
             height: 180px;
-            background: lightskyblue;
+            
         }
         .discover-stats{
             width: 42.6vw;
             height: 147px;
-            background: lightsteelblue;
+           
         }
     }
 }
