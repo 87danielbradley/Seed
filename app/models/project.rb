@@ -58,12 +58,16 @@ class Project < ApplicationRecord
     def pledged
         # Project.sum(rewards.pledge_amount)
         total = 0
+        count = 0
         rewards.each do |reward|
             total += reward.pledged
+            count +=1
         end
-        return total
+        return {count: count, total: total}
         
     end
+
+    
 
 
 end

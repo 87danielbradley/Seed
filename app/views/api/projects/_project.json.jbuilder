@@ -2,7 +2,8 @@ json.extract! project, :body, :title, :description, :id, :start_date, :end_date,
 json.author project.author.name
 json.location project.location.name
 json.category project.category.name
-json.pledged_amt project.pledged
+json.pledged_amt project.pledged[:total]
+json.pledge_count project.pledged[:count]
 json.faqs project.faqs do |faq|
     json.extract! faq, :question, :answer
 end

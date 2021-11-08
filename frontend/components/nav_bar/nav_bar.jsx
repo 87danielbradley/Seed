@@ -19,11 +19,11 @@ class NavBar extends React.Component{
                 <Link className="nav-link" to="/discover">Discover</Link>
                 <Link className="nav-link" to="/start" >Start a project</Link>
                 </div>
-                <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED</Link></h1>
+                <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED <i className="fas fa-seedling"></i></Link></h1>
                 <div>
                 <Link className="nav-link " to="/">Search <i className="fas fa-search"></i></Link>
                 {this.props.currentUser ? (
-                    <button onClick={this.props.logout}>Logout</button>
+                    <button className="navbar-logout" onClick={this.props.logout}><i className="fas fa-globe"></i></button>
                 ):(
                     <Link className='nav-link login-button' to="/login">Log in</Link>
                 )}
