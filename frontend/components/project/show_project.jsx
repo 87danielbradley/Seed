@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
+import RewardElement from "../reward/reward_show";
 
 
 
@@ -49,11 +50,11 @@ class ProjectShow extends React.Component{
                         <h4>days to go</h4>
 
                         <div>
-                            <button className="show-stats-back">Back this project</button>
+                            <button className="show-stats-back">Seed this project</button>
                             <button className="show-stats-remind"><i className="far fa-bookmark"></i>Remind me</button>
-                            <button className="show-logo"><i className="fab fa-github"></i></button>
-                            <button className="show-logo"><i className="fab fa-linkedin"></i></button>
-                            <button className="show-logo"><i className="fab fa-angellist"></i></button>
+                            <a className="show-logo" href="https://github.com/87danielbradley"><i className="fab fa-github"></i></a>
+                            <a className="show-logo" href="https://www.linkedin.com/in/87danielbradley/"><i className="fab fa-linkedin"></i></a>
+                            <a className="show-logo" href="https://angel.co/u/daniel-james-bradley"><i className="fab fa-angellist"></i></a>
                         <div>
 
                             </div>
@@ -64,7 +65,7 @@ class ProjectShow extends React.Component{
 
                 </div>
                 <div className="project-show-banner">
-                    <div><i className="fas fa-seedling"></i> Kickstarter connects creators with backers to fund projects.</div>
+                    <div><i className="fas fa-seedling"></i> Seed connects creators with backers to fund projects.</div>
                     <div><i className="fas fa-comments"></i> Rewards aren’t guaranteed, but creators must regularly update backers.</div>
                     <div><i className="fas fa-hand-holding-usd"></i> You’re only charged if the project meets its funding goal by the campaign deadline.</div>
                 </div>
@@ -84,15 +85,25 @@ class ProjectShow extends React.Component{
                         
                         </div>
                         <div className="project-show-tab-buttons">
-                            <button className="button-back">Back this project</button>
+                            <button className="button-back">Seed this project</button>
                             <button className="button-remind"><i className="far fa-bookmark"></i> Remind me</button>
+                        </div>
+                    </div>
+                    <div className="bottom-group">
+                        <div className="bottom-container-med-left">
+                            <h1>{ this.props.project.body }</h1>
+                        </div>
+
+                        <div className="bottom-container-med-right">
+                            {this.props.project.rewards.map(reward =>  <RewardElement reward={reward}/>)}
+                           
                         </div>
                     </div>
                 </div>
                 
 
 
-                <h1>{ this.props.project.body }</h1>
+                
                
                 
             </div>

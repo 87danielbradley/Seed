@@ -1,5 +1,13 @@
 
-
+.bottom-group{
+    display: flex;
+    height: 500px;
+    .bottom-container-med-left{}
+    .bottom-container-med-right{
+        position: sticky;
+        top: 25px;
+    }
+}
 .picture-links{
     
     margin-left: 0;
@@ -16,6 +24,7 @@
     border: none;
     color: $green;
     cursor: pointer;
+    margin-left: 10px;
 }
 .project-show-main{
     display: flex;
@@ -31,13 +40,14 @@
         margin-left: 5vw;
         margin-right: 5vw;
         background: none;
+        height: 100vh;
 
         .project-show-title{
             display: flex;
             flex-direction: column;
             justify-content: center;
             background: none;
-            width: 45vw;
+            width: 55vw;
             height: 155px;
             height: 20vh;
             h1{
@@ -50,6 +60,9 @@
                 margin-bottom: 20px;
             }
             
+        }
+        .picture-container{
+           
         }
         .project-show-picture{
             background: yellow;
@@ -125,12 +138,16 @@
         .project-show-bottom-container{
             height: 500px;
             display: flex;
+            flex-direction: column;
             background: none;
             .project-show-tab{
                 border-top: solid;
                 border-bottom: solid;
                 border-width: 1px;
                 border-color: lightgrey;
+                background: white;
+                z-index: 100;
+                
             }
             
             .project-show-tab-nav{
@@ -138,7 +155,9 @@
                 gap: 25px;
                 justify-content: space-evenly;
 
-                background: none;
+                
+
+                
                 .tab-button-container{
                     margin-left: 5vw;
                     margin-top: 10px;
@@ -150,12 +169,13 @@
                     max-height: 40px;
                     border: none;
                     
+                    
 
                     .project-show-tab-button{
                         margin: auto;
                         background: none;
                         border: none;
-                        color: color;
+                        cursor: pointer;
 
                         &:hover{
                             color: $green;
@@ -177,7 +197,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 position: sticky;
-                background: none;
+                
                 width: 100vw;
                 top: 0px;
                 align-self: flex-start;
@@ -214,6 +234,7 @@
 }
 .project-show-banner{
     display: flex;
+    width: 100vw;
     height: 155px;
     background: #F6F2EB;
     margin-left: 0vw;
