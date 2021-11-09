@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import RewardElement from "../reward/reward_show";
+import RewardElement from "../reward/reward_view";
 
 
 
@@ -90,11 +90,28 @@ class ProjectShow extends React.Component{
                         </div>
                     </div>
                     <div className="bottom-group">
+                        <div className="bottom-container-sidebar">Story</div>
                         <div className="bottom-container-med-left">
                             <h1>{ this.props.project.body }</h1>
                         </div>
 
                         <div className="bottom-container-med-right">
+                            <h3>Support</h3>
+                            <div className="default-reward-button">
+                            <form className="default-reward-button">
+                                <h1>Pledge without a reward</h1>
+                                <input 
+                                    className="default-form"
+                                    type="number"
+                                    placeholder="10"
+                                />
+                                <div className="default-pledge">
+                                    <h2>Back it because you believe in it.</h2>
+                                    <h3>Support the project for no reward, just because it speaks to you.</h3>
+                                </div>
+                                <button className="default-form">Continue</button>
+                            </form>
+                            </div>
                             {this.props.project.rewards.map(reward =>  <RewardElement reward={reward}/>)}
                            
                         </div>

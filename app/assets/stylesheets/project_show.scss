@@ -1,11 +1,64 @@
+.default-reward-button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid;
+    border-color: lightgray;
+    border-width: 1px;
+    width: 25vw;
+    h1{
+        margin: 10px;
+    }
+}
+.default-form{
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.default-pledge{
+    background-image: linear-gradient(rgba(130, 201, 255,0.5),rgba(255, 220, 171,.5));
+    border: solid;
+    border-color: rgba(130, 201, 255,0.5);
+    width: 90%;
+    max-width: 90%;
+    margin: auto;
+    *{
+        margin: 5px;
+        max-width: 90%;
+    }
+    h1{
+      font-size: 18px;  
+    }
+    input{
+        height: 42px;
+    }
+    .default-pledge{
+        
+        font-size: 14px;
+        h2{
+            font-weight: bold;
+        }
+        
+    }
 
+}
 .bottom-group{
     display: flex;
+
     height: 500px;
-    .bottom-container-med-left{}
+    .bottom-container-med-left{
+        width: 50vw;
+        margin-left: 20vw;
+        overflow: auto;
+    }
     .bottom-container-med-right{
-        position: sticky;
+        overflow: auto;
         top: 25px;
+    }
+    .bottom-container-sidebar{
+        position: sticky;
+        top: 50px;
     }
 }
 .picture-links{
@@ -136,9 +189,10 @@
         }
     }
         .project-show-bottom-container{
-            height: 500px;
+            height: 150vh;
             display: flex;
             flex-direction: column;
+            justify-content: start;
             background: none;
             .project-show-tab{
                 border-top: solid;

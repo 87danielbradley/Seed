@@ -1,0 +1,37 @@
+.reward-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 25vw;
+    height: 500px;
+    background: none;
+    outline-color: lightgray;
+    outline-width: 1px;
+    margin-top: 10px;
+    transition: background-color 1s;
+    color: rgb(86, 84, 84);
+    
+    h4{
+        width: 50px;
+        height: 25px;
+        border-radius: 30px;
+        background: peachpuff;
+    }
+
+
+    &:hover{
+        background: $green;
+        color:rgba(232, 232, 232, 0);
+        
+
+    &:hover:before{
+        
+        content:"Select this reward";
+        color: white;
+        margin: auto;
+    }
+    }
+
+
+
+}
