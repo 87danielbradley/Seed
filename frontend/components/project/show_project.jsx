@@ -27,7 +27,7 @@ class ProjectShow extends React.Component{
                 
                     
                 <div className="project-show-top-container">
-                    <div className="show-el project-show-title">
+                    <div className="project-show-title">
                         <h1>{ this.props.project.title }</h1>
                         <h3>{ this.props.project.description}</h3>
                     </div>
@@ -52,9 +52,9 @@ class ProjectShow extends React.Component{
                         <div>
                             <button className="show-stats-back">Seed this project</button>
                             <button className="show-stats-remind"><i className="far fa-bookmark"></i>Remind me</button>
-                            <a className="show-logo" href="https://github.com/87danielbradley"><i className="fab fa-github"></i></a>
-                            <a className="show-logo" href="https://www.linkedin.com/in/87danielbradley/"><i className="fab fa-linkedin"></i></a>
-                            <a className="show-logo" href="https://angel.co/u/daniel-james-bradley"><i className="fab fa-angellist"></i></a>
+                            <span className="show-logo" id="github"><a className="show-logo" href="https://github.com/87danielbradley"><i className="fab fa-github"></i></a></span>
+                            <span className="show-logo" id="linkedin"><a className="show-logo" href="https://www.linkedin.com/in/87danielbradley/"><i className="fab fa-linkedin"></i></a></span>
+                            <span className="show-logo" id="angellist"><a className="show-logo" href="https://angel.co/u/daniel-james-bradley"><i className="fab fa-angellist"></i></a></span>
                         <div>
 
                             </div>
