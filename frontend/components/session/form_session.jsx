@@ -28,9 +28,11 @@ class SessionForm extends React.Component{
     }
     demoUser(e){
         e.preventDefault();
-        this.setState({email: "starwars"})
-        this.setState({password: "starwars"})
-        this.props.login(this.state)
+        // this.setState({email: "starwars"})
+        // this.setState({password: "starwars"})
+        // this.props.login(this.state)
+        //     .then( () => this.props.history.push('/'))
+        this.props.login({email: "starwars",password: "starwars"})
             .then( () => this.props.history.push('/'))
     }
     sessionErrors(){
