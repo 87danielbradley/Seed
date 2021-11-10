@@ -20,9 +20,10 @@ class ProjectShow extends React.Component{
         console.log(this.state)
         const {project} = this.props
         
-        return [
+        return (
+        // [
            
-            (typeof project !== 'undefined') ? (
+        //     (typeof project !== 'undefined') ? (
             <div className="project-show-main">
                 
                     
@@ -124,8 +125,10 @@ class ProjectShow extends React.Component{
                
                 
             </div>
-            ) : this.props.history.push('/404')
-            ]
+            // ) : this.props.history.push('/404')
+            // ]
+
+        )
         
     }
 }

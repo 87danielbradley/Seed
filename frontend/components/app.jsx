@@ -7,6 +7,7 @@ import ShowProjectContainer from "./project/show_project_container";
 import IndexProjectContainer from "./project/index_project_container";
 import CreateProjectContainer from "./project/create_project_container";
 import DiscoverContainer from "./discover/discover_container";
+import CategoryContainer from "./category/category_container";
 
 
 import { Route, Switch } from "react-router-dom";
@@ -29,7 +30,7 @@ const App = () => (
             <ProtectedRoute path="/start" component={CreateProjectContainer} />
             <AuthRoute path="/login" component={LoginContainer} />
             <AuthRoute path="/signup" component={SignupContainer}/>
-            <Route path="/discover/:categoryId" component={DiscoverContainer}/>
+            <Route path="/discover/:category" component={CategoryContainer}/>
             <Route path="/discover" component={DiscoverContainer}/>
             <Route path="/:default" component={DefaultContainer} />
         </Switch>

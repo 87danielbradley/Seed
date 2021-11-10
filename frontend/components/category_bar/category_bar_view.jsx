@@ -16,14 +16,14 @@ class CategoryBar extends React.Component{
             
             
             <div className="category-bar">
-                <Link className="category-link" to="/">{`Arts`}</Link>
-                <Link className="category-link" to="/" >{`Comics & Illustration`}</Link>
-                <Link className="category-link" to="/" >{`Design & Tech`}</Link>
-                <Link className="category-link " to="/">{`Film`}</Link>
-                <Link className="category-link " to="/">{`Food & Craft`}</Link>
-                <Link className="category-link " to="/">{`Games`}</Link>
-                <Link className="category-link " to="/">{`Music`}</Link>
-                <Link className="category-link " to="/">{`Publishing`}</Link>
+                <Link className="category-link" to="/discover/Art">{`Arts`}</Link>
+                <Link className="category-link" to="/discover/Comics" >{`Comics & Illustration`}</Link>
+                <Link className="category-link" to="/discover/Technology" >{`Design & Tech`}</Link>
+                <Link className="category-link " to="/discover/Film & Video">{`Film`}</Link>
+                <Link className="category-link " to="/discover/Food">{`Food & Craft`}</Link>
+                <Link className="category-link " to="/discover/Games">{`Games`}</Link>
+                <Link className="category-link " to="/discover/Music">{`Music`}</Link>
+                <Link className="category-link " to="/discover/Publishing">{`Publishing`}</Link>
             </div>
            
            

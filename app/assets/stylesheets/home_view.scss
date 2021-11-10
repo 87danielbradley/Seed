@@ -13,20 +13,32 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
 
 .home-large-container{
     display: flex;
-    background: red;
+    justify-content: space-around;
+    gap: 10px;
+    overflow: hidden;
+    
 }
 
 .home-med-container-left{
-    background: green;
-    width: 54.3vw;
+    
+    width: 49.3vw;
     height: 80vh;
     border-bottom: solid;
     border-color: lightgrey;
     border-width: 1px;
+
+    .featured-links{
+        display: flex;
+        justify-content: space-between;
+        .featured-likes{
+            display: flex;
+            gap: 10px;
+        }
+    }
 }
 .home-med-container-right{
-    background: orange;
-    width: 45.7vw;
+    
+    width: 40.7vw;
     height: 80vh;
     border-bottom: solid;
     border-left: solid;
@@ -35,19 +47,129 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
 }
 
 .home-main{
+    margin-left: 5vw;
+    margin-right: 5vw;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
 
     h1{
-        margin: auto;
-        font-size: 5vh;
-        margin-bottom: 3vh;
+        margin-top: 20px;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    h2{
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 }
 
+.cat-picture-main{
+    margin-top: 10px;
+    width: 90%;
+    height: 75%;
+    
+    background: orange;
+}
+.home-med-container-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
+    h4{
+        font-size: 13px;
+    }
+    h1{
+        font-size: 24px;
+        &:hover{
+            text-decoration: underline;
+            color: $green;
+        }
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 12px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+   
+}
+.featured-remind{
+    width: 84px;
+    height: 24px;
+    background: none;
+}
+.category-container{
+        margin-top: 10px;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        
+        height: 75%;
+        width: 90%;
+    .rec-container{
+        display: flex;
+        gap: 10px;
+        width: 90%;
+        height: 33%;
+        border-bottom: solid;
+        border-bottom: 1px;
+        border-bottom-color: lightgray;
+        
 
+        .small-pic{
+            height: 80%;
+            width: 40%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: goldenrod;
+        }
+        .rec-stats{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            h1{
+                font-size: 14px;
+                &:hover{
+                    text-decoration: underline;
+                    color: $green;
+                }
+            }
+            h2{
+                font-size: 12px;
+                
+            }
+            h3{
+                font-size: 12px;
+                text-decoration: underline;
+
+            }
+        }
+        
+        .rec-stats-icons-container{
+            display: flex;
+            .rec-stats-icons{
+                background: none;
+                border-radius: 100%;
+                border-width: 1px;
+                border-color: lightgray;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.home-large-container{
+    .rec-stats-icons{
+                background: none;
+                border-radius: 100%;
+                border-width: 1px;
+                border-color: lightgray;
+                cursor: pointer;
+            }
+}
 
 
 @media only screen and (max-width: 800px) {
