@@ -10,15 +10,20 @@ class CategoryView extends React.Component{
     }
     componentDidMount(){
         // this.props.fetchProjects({category: this.props.match.params.category});
-        this.props.fetchProjects();
+        this.props.fetchProjects()
+            .then(response => this.setState({projects: response}))
+        
     }
     
     render(){
-        
-        return(
+        const {projects} = this.props
+        return[
+           
+            (projects.length > 0) ? (
             <div className="home-main">
-            <h1>{this.props.projects[0].category}</h1>
-            <h2>Explore {this.props.projects[0].category} from Seedbed's community.</h2>
+                
+                <h1>{this.props.projects[0].category}</h1>
+                <h2>Explore {this.props.projects[0].category} from Seedbed's community.</h2>
             <div className="home-large-container">
                 
                 <div className="home-med-container-left">
@@ -51,8 +56,10 @@ class CategoryView extends React.Component{
                 
             </div>
             </div>
-           
-        )
+           ) : <div>loading</div>
+            
+            ]
+        
     }
 }
 

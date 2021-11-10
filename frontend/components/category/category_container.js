@@ -10,8 +10,7 @@ const mSTP= (state = {}, ownProps) => ({
 })
 
 const mDTP = (dispatch, ownProps) => ({
-    fetchProjects: (data) => dispatch(fetchProjects(data)),
-    logout: () => dispatch(logout())
+    fetchProjects: (data) => dispatch(fetchProjects(data))
 })
 
 export default connect(mSTP,mDTP)(CategoryView);

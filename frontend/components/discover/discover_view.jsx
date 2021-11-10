@@ -5,15 +5,22 @@ import DiscoverItem from "./discover_item";
 class DiscoverView extends React.Component{
      componentDidMount(){
        
-        this.props.fetchProjects({category: this.props.match.params.categoryId})
+        // this.props.fetchProjects({category: this.props.match.params.category})
+        
+        this.props.fetchProjects()
         
     }
     
     render(){
         
         const {projects, removeProject} = this.props
-        return(
+        
+        return[
+           
+            (typeof projects !== 'undefined') ? (
+        
             <div>
+                
                 <h1 className="discover-title">Explore <span className="discover-green">{this.props.projects.length} projects</span></h1>
             <div className="discover-main">
                 
@@ -24,8 +31,10 @@ class DiscoverView extends React.Component{
                 
             </div>
             </div>
-           
-        )
+           ) : <div>loading</div>
+            
+            ]
+        
     }
 }
 
