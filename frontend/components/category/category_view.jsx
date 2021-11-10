@@ -29,7 +29,7 @@ class CategoryView extends React.Component{
                 <div className="home-med-container-left">
                     <h4>FEATURED PROJECT</h4>
                     <div className="cat-picture-main">Picture</div>
-                    <h1>{this.props.projects[0].title}</h1>
+                    <h1>{<Link to={`/projects/${this.props.projects[0].id}`} replace>{this.props.projects[0].title}</Link>}</h1>
                     <h2>{this.props.projects[0].body}</h2>
                     <h3>{this.props.projects[0].author}</h3>
 

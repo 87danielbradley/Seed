@@ -10,7 +10,7 @@ class CategoryItem extends React.Component{
             <div className="rec-container">
                 <div className="small-pic"> picture</div>
                 <div className="rec-stats">
-                    <h1>{this.props.project.title}</h1>
+                    <h1>{<Link to={`/projects/${this.props.project.id}`} replace>{this.props.project.title}</Link>}</h1>
                     <h2>{`${Math.trunc(this.props.project.pledged_amt/this.props.project.goal*100)}% funded`}</h2>
                     <h3>{`By ${this.props.project.author}`}</h3>
                     <div className="rec-stats-icons-container">
