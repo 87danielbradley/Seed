@@ -7,9 +7,14 @@
     .social-links{
         display: flex;
         gap: 20px;
-        *{
+        a{
             height: 22px;
             width: 22px;
+
+            .fab{
+                min-height: max-content;
+                min-width: max-content;
+            }
         }
     }
     img{
