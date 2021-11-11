@@ -19,7 +19,7 @@ class HomeView extends React.Component{
                 
                 <div className="home-med-container-left">
                     <h4>FEATURED PROJECT</h4>
-                    <div className="cat-picture-main"><img id="nodedominance" src="https://raw.githubusercontent.com/87danielbradley/NodeDominance/main/screenShot.png"/></div>
+                    <div className="cat-picture-main">Picture</div>
                     <h1>My Javascript Project</h1>
                     <h2>I designed and coded my own game</h2>
                     <h3>By Daniel Bradley</h3>

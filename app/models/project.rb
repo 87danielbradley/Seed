@@ -28,7 +28,6 @@ class Project < ApplicationRecord
     validates :goal, presence: true
     validates :risks, presence: true, length: {maximum: 300}
 
-    has_one_attached :photo
 
     belongs_to :author,
         foreign_key: :author_id,
