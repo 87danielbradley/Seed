@@ -5,7 +5,8 @@ import ProjectShow from './show_project';
 
 
 const mSTP= (state = {}, ownProps) => {
-    
+    // console.log("state", state)
+    // console.log("ownProps", ownProps)
     return {project: state.entities.projects[ownProps.match.params.projectId]}
     
 }
