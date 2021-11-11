@@ -8,6 +8,7 @@ import IndexProjectContainer from "./project/index_project_container";
 import CreateProjectContainer from "./project/create_project_container";
 import DiscoverContainer from "./discover/discover_container";
 import CategoryContainer from "./category/category_container";
+import MediaContainer from "./social_links/media_container";
 
 
 import { Route, Switch } from "react-router-dom";
@@ -36,6 +37,7 @@ const App = () => (
         </Switch>
         
         <Route path="/" component={CategoryBarContainer} />
+        <Route path="/" component={MediaContainer} />
         
     </div>
 );

@@ -22,7 +22,15 @@ module.exports = {
                         presets: ['@babel/env', '@babel/react']
                     }
                 },
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                {
+                    loader: 'file-loader',
+                },
+                ],
+            },
         ]
     }
 }
