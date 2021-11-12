@@ -1,6 +1,17 @@
 # SeedBed
 <a href="https://seedbed.herokuapp.com/#/"> ➤SeedBed Live!</a></li>
 
+## Features
+  + Frontend to backend user authentication with hashed passwords using BCrypt
+  + Guests can view all projects without signing in.
+  + Logged in users can Create, Read, Update, and Delete (CRUD) projects.
+  + Users can discover projects by categories or by all
+  + Each project has a show page that shows rewards
+  + reactive display for various screen widths from mobile to pc.
+
+![](./app/assets/images/Nov-12-2021 00-46-24.gif)
+
+
 
 ## Technologies
   + Javascript
@@ -27,12 +38,7 @@
     + PostgreSQL
     + BCrypt - used to create password digests with
 
-## Features
-  + Frontend to backend user authentication with hashed passwords using BCrypt
-  + Guests can view all projects without signing in.
-  + Logged in users can Create, Read, Update, and Delete (CRUD) projects.
-  + Users can discover projects by categories or by all
-  + Each project has a show page that shows rewards
+
  
  
  
