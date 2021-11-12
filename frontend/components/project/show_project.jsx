@@ -54,7 +54,10 @@ class ProjectShow extends React.Component{
                         <h4>days to go</h4>
 
                         <div>
-                            <button className="show-stats-back">Seed this project</button>
+                            <button className="show-stats-back" onClick={()=>window.scroll({
+  top: 900,
+  behavior: 'smooth'
+})}>Seed this project</button>
                             <button className="show-stats-remind"><i className="far fa-bookmark"></i>Remind me</button>
                             <span className="show-logo" id="github"><a className="show-logo" href="https://github.com/87danielbradley"><i className="fab fa-github"></i></a></span>
                             <span className="show-logo" id="linkedin"><a className="show-logo" href="https://www.linkedin.com/in/87danielbradley/"><i className="fab fa-linkedin"></i></a></span>
@@ -89,7 +92,11 @@ class ProjectShow extends React.Component{
                         
                         </div>
                         <div className="project-show-tab-buttons">
-                            <button className="button-back">Seed this project</button>
+                            <button className="button-back" onClick={()=>window.scroll({
+                                top: 1000,
+
+                                behavior: 'smooth'
+                                })}>Seed this project</button>
                             <button className="button-remind"><i className="far fa-bookmark"></i> Remind me</button>
                         </div>
                     </div>
@@ -113,7 +120,12 @@ class ProjectShow extends React.Component{
                                     <h2>Back it because you believe in it.</h2>
                                     <h3>Support the project for no reward, just because it speaks to you.</h3>
                                 </div>
-                                <button className="default-form">Continue</button>
+                                <button className="default-form" onClick={ () => window.scroll({
+                                top: 0,
+
+                                behavior: 'smooth'})
+                             
+                                }>Continue</button>
                             </form>
                             </div>
                             {this.props.project.rewards.map(reward =>  <RewardElement reward={reward}/>)}
