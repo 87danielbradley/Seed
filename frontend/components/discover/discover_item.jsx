@@ -21,7 +21,7 @@ class DiscoverItem extends React.Component{
                     <h3>{`${Math.ceil(((new Date(this.props.project.end_date.split('T')[0]))-(new Date()))/(1000 * 3600 * 24))} days to go`}</h3>
 
                     <div className="discover-links">
-                        <Link to="/discover" className="discover-link">{this.props.project.category}</Link>
+                        <Link to={`/discover/${this.props.project.category}`} className="discover-link">{this.props.project.category}</Link>
                         <Link to="/" className="discover-link"><i className="fas fa-map-marker-alt"></i>{this.props.project.location}</Link>
                     </div>
                 </div>

@@ -11,7 +11,9 @@ class CategoryView extends React.Component{
     componentDidMount(){
         // this.props.fetchProjects({category: this.props.match.params.category});
         this.props.fetchProjects()
-            .then(response => this.setState({projects: response}))
+            .then(response => {
+                window.scroll({top: 0,behavior: 'smooth'});
+                this.setState({projects: response})})
         
     }
     

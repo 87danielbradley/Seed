@@ -10,8 +10,11 @@ class ProjectShow extends React.Component{
         super(props)
     }
     componentDidMount(){
+        
         this.props.fetchProject(this.props.match.params.projectId)
-            .then(response => this.setState({project: response}))
+            .then(response => {
+                window.scroll({top: 0,behavior: 'smooth'});
+                this.setState({project: response})})
     }
     
 
