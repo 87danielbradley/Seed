@@ -25,6 +25,7 @@ class ProjectShow extends React.Component{
             (typeof project !== 'undefined') ? (
             <div className="project-show-main">
                 
+                {(this.props.currentUser.id === this.props.project.author_id) ? <div><Link to={`/projects/${this.props.match.params.projectId}/edit`}>Edit project</Link></div> : null}
                     
                 <div className="project-show-top-container">
                     <div className="project-show-title">
@@ -32,7 +33,7 @@ class ProjectShow extends React.Component{
                         <h3>{ this.props.project.description}</h3>
                     </div>
                     <div className="picture-container">
-                        <div className="show-el project-show-picture">Picture
+                        <div className="show-el project-show-picture"><img src={this.props.project.url}/>
                         
                         </div>
                         <div className="picture-links"> <span><i className="fas fa-seedling"></i>Projects we love      </span><span><i className="far fa-compass"></i>{this.props.project.category}      </span><span><i className="fas fa-map-marker-alt"></i>{this.props.project.location}      </span></div>

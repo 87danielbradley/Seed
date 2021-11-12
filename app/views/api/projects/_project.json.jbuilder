@@ -1,4 +1,4 @@
-json.extract! project, :body, :title, :description, :id, :start_date, :end_date, :goal, :risks
+json.extract! project, :body, :title, :description, :id, :start_date, :end_date, :goal, :risks, :url, :author_id
 json.author project.author.name
 json.location project.location.name
 json.category project.category.name

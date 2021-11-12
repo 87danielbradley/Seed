@@ -16,7 +16,9 @@ class CategoryView extends React.Component{
     }
     
     render(){
-        const {projects} = this.props
+        const {projects} = this.props;
+        const myRandom = Math.floor(Math.random() * this.props.projects.length)
+        const myLength = this.props.projects.length
         return[
            
             (projects.length > 0) ? (
@@ -28,7 +30,7 @@ class CategoryView extends React.Component{
                 
                 <div className="home-med-container-left">
                     <h4>FEATURED PROJECT</h4>
-                    <div className="cat-picture-main">Picture</div>
+                    <div className="cat-picture-main"><Link to={`/projects/${this.props.projects[0].id}`}><img src={this.props.projects[0].url}/></Link></div>
                     <h1>{<Link to={`/projects/${this.props.projects[0].id}`} replace>{this.props.projects[0].title}</Link>}</h1>
                     <h2>{this.props.projects[0].body}</h2>
                     <h3>{this.props.projects[0].author}</h3>
@@ -45,9 +47,9 @@ class CategoryView extends React.Component{
                 
                 <div className="home-med-container-right">    RECOMMENDED FOR YOU
                     <div className="category-container">
-                        <CategoryItem project={this.props.projects[Math.floor(Math.random() * this.props.projects.length)]}/>
-                        <CategoryItem project={this.props.projects[Math.floor(Math.random() * this.props.projects.length)]}/>
-                        <CategoryItem project={this.props.projects[Math.floor(Math.random() * this.props.projects.length)]}/>
+                        <CategoryItem project={this.props.projects[(myRandom+1)%myLength]}/>
+                        <CategoryItem project={this.props.projects[(myRandom+2)%myLength]}/>
+                        <CategoryItem project={this.props.projects[(myRandom+3)%myLength]}/>
                     </div>
                     <div>
                         tabs
