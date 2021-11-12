@@ -1,6 +1,15 @@
 # SeedBed
 <a href="https://seedbed.herokuapp.com/#/"> ➤SeedBed Live!</a></li>
 
+ ## Screen Shots
+ <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Nov-12-2021%2000-46-24.gif?raw=true" />
+  -This is the project show page visible to any user
+  
+  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/discovery.gif?raw=true" />
+  - This shows the discovery view showing an unfiltered index of projects.
+
+  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/seedbed%20form.gif?raw=true" />
+  - This is the form only logged in users can see and use to create/update projects.
 
 ## Technologies
   + Javascript
@@ -35,15 +44,7 @@
   + Each project has a show page that shows rewards
   + reactive display for various screen widths from mobile to pc.
 
- ## Screen Shots
- <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Nov-12-2021%2000-46-24.gif?raw=true" />
-  -This is the project show page where you can see and back various rewards
-  
-  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/discovery.gif?raw=true" />
-  - This shows the discovery view with it's responsive view for various screensizes.
 
-  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/seedbed%20form.gif?raw=true" />
-  - This is the form logged in users can see and use to create/update projects.
  
  
 
