@@ -15,17 +15,17 @@
   + Ajax
 
 ## Archetecture
-  ### Frontend
-    + React/Redux
-    + Javascript
-    + React Router
-    + jQuery/Ajax
-    + React DOM
+### Fronten
+  + React/Redux
+  + Javascript
+  + React Router
+  + jQuery/Ajax
+  + React DOM
     
-   ### Backend
-    + Ruby on Rails
-    + PostgreSQL
-    + BCrypt - used to create password digests with
+### Backend
+  + Ruby on Rails
+  + PostgreSQL
+  + BCrypt - used to create password digests with
 
 ## Features
   + Frontend to backend user authentication with hashed passwords using BCrypt
