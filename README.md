@@ -9,7 +9,7 @@
   + Each project has a show page that shows rewards
   + reactive display for various screen widths from mobile to pc.
 
-![](./app/assets/images/Nov-12-2021 00-46-24.gif)
+![](/app/assets/images/Nov-12-2021 00-46-24.gif)
 
 
 
