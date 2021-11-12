@@ -68,8 +68,12 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
     margin-top: 10px;
     width: 90%;
     height: 75%;
-    
-    background: orange;
+    overflow: hidden;
+    img{
+        max-width: 100%;
+        vertical-align: middle;
+        
+    }
 }
 .home-med-container-left{
     display: flex;
@@ -122,10 +126,14 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
 
         .small-pic{
             height: 80%;
-            width: 40%;
+            width: 120px;
             margin-top: 10px;
             margin-bottom: 10px;
-            background: goldenrod;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                vertical-align: middle;
+            }
         }
         .rec-stats{
             display: flex;

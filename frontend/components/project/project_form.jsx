@@ -11,16 +11,19 @@ class ProjectForm extends React.Component{
     handleSubmit(event) {
         event.preventDefault();
         this.props.action(this.state);
+        this.props.history.push(`/`)
     }
 
     update(field){
-        return (event) => this.setState({[field]: event.currentTarget.value})
+        
+        return (event) => this.setState({[field]: event.target.value})
     }
     
     render(){
-        
+       
         return(
            <div className="project-form-container">
+               {(this.props.currentUser === this.props.project.author_id && this.props.formType === 'Update Project') ? <div><Link to="/"><button onSubmit={this.props.removeProject(this.props.project.id)}>Delete project</button></Link></div> : null}
                <form className="project-form" onSubmit={this.handleSubmit}>
                     <div className="large-form-box-title">
                         <h2>Start with the basics</h2>
@@ -75,7 +78,10 @@ You’ll be able to change the category and subcategory even after your project 
 
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <select className="project-form-item" id="category-select" placeholder="test">
+                                <select className="project-form-item" 
+                                        id="category-select" 
+                                        placeholder="test"
+                                        onChange={this.update('category_id')}>
                                     <option value="0">Category</option>
                                     <option value="1">Art</option>
                                     <option value="2">Comics</option>
@@ -108,34 +114,37 @@ You’ll be able to change the category and subcategory even after your project 
 
                         <div className="small-form-box-right">
                             <div className="xsmall-form-box">
-                                <select className="project-form-item" id="location-select">
-                                <option value="0">Location</option>
-                                <option value="1">Austrailia</option>
-                                <option value="2">Austria</option>
-                                <option value="3">Belgium</option>
-                                <option value="4">Canada</option>
-                                <option value="5">Denmark</option>
-                                <option value="6">France</option>
-                                <option value="7">Germany</option>
-                                <option value="8">Greece</option>
-                                <option value="9">Hong Kong</option>
-                                <option value="10">Ireland</option>
-                                <option value="11">Italy</option>
-                                <option value="12">Japan</option>
-                                <option value="13">Luxembourg</option>
-                                <option value="14">Mexico</option>
-                                <option value="15">New Zealand</option>
-                                <option value="16">Norway</option>
-                                <option value="17">Poland</option>
-                                <option value="18">Singapore</option>
-                                <option value="19">Slovenia</option>
-                                <option value="20">Spain</option>
-                                <option value="21">Sweden</option>
-                                <option value="22">Switzerland</option>
-                                <option value="23">the Netherlands</option>
-                                <option value="24">the United Kingdom</option>
-                                <option value="25">the United States</option>
-                            </select>
+                                <select className="project-form-item" 
+                                        id="location-select"
+                                        onChange={this.update('location_id')}
+                                >
+                                    <option value="0">Location</option>
+                                    <option value="1">Austrailia</option>
+                                    <option value="2">Austria</option>
+                                    <option value="3">Belgium</option>
+                                    <option value="4">Canada</option>
+                                    <option value="5">Denmark</option>
+                                    <option value="6">France</option>
+                                    <option value="7">Germany</option>
+                                    <option value="8">Greece</option>
+                                    <option value="9">Hong Kong</option>
+                                    <option value="10">Ireland</option>
+                                    <option value="11">Italy</option>
+                                    <option value="12">Japan</option>
+                                    <option value="13">Luxembourg</option>
+                                    <option value="14">Mexico</option>
+                                    <option value="15">New Zealand</option>
+                                    <option value="16">Norway</option>
+                                    <option value="17">Poland</option>
+                                    <option value="18">Singapore</option>
+                                    <option value="19">Slovenia</option>
+                                    <option value="20">Spain</option>
+                                    <option value="21">Sweden</option>
+                                    <option value="22">Switzerland</option>
+                                    <option value="23">the Netherlands</option>
+                                    <option value="24">the United Kingdom</option>
+                                    <option value="25">the United States</option>
+                                </select>
                             </div>
                             
                         </div>

@@ -37,11 +37,10 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
     font-family: fantasy;
     box-shadow:mediumturquoise;
     color: $green;
-    
-    &:hover{
-        color: darkgreen;
-        font-size: 39vw;
-        transform: translate(2,1);
+    img{
+        max-height: 100%;
+        max-width: 80%;
     }
+    
 }
  

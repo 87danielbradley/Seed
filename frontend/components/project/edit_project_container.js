@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { editProject, fetchProject } from "../../actions/project_actions";
+import { editProject, fetchProject, removeProject } from "../../actions/project_actions";
 import ProjectForm from './project_form';
 
 
@@ -32,7 +32,8 @@ const mSTP= (state = {}, ownProps) => ({
 const mDTP = (dispatch, ownProps) => ({
     
     fetchProject: (projectId) => dispatch(fetchProject(projectId)),
-    action: (project) => dispatch(editProject(project))
+    action: (project) => dispatch(editProject(project)),
+    removeProject: (projectId) => dispatch(removeProject(projectId))
 })
 
 export default connect(mSTP,mDTP)(EditProjectForm);

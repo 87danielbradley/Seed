@@ -29,7 +29,12 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
         .discover-photo{
             width: 27vw;
             height: 15.71vw;
-            background: lightsalmon;
+            background: none;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                vertical-align: middle;
+            }
         }
         .discover-body{
             display: flex;
