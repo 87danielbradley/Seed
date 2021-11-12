@@ -24,7 +24,7 @@
   + Ajax
 
 ## Archetecture
-### Fronten
+### Frontend
   + React/Redux
   + Javascript
   + React Router
