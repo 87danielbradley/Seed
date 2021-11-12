@@ -25,7 +25,7 @@
 ### Backend
   + Ruby on Rails
   + PostgreSQL
-  + BCrypt - used to create password digests with
+  + BCrypt - used to hash passwords and create password digests
 
 ## Features
   + Frontend to backend user authentication with hashed passwords using BCrypt
