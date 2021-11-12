@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { editProject, fetchProject, removeProject } from "../../actions/project_actions";
 import ProjectForm from './project_form';
+
 
 
 class EditProjectForm extends React.Component{
@@ -16,7 +18,7 @@ class EditProjectForm extends React.Component{
         
         if (!this.props.project) return null;
         return (
-            <ProjectForm action={this.props.action} formType={this.props.formType} project={this.props.project} />
+            <ProjectForm action={this.props.action} formType={this.props.formType} project={this.props.project} currentUser={this.props.currentUser} removeProject={this.props.removeProject} history={this.props.history}/>
         )
     }
 }
@@ -25,7 +27,8 @@ class EditProjectForm extends React.Component{
 
 const mSTP= (state = {}, ownProps) => ({
     project: state.entities.projects[ownProps.match.params.projectId],
-    formType: 'Update Project'
+    formType: 'Update Project',
+     currentUser: state.session.currentUser
     
 })
 

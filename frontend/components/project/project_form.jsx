@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ProjectForm extends React.Component{
     constructor(props){
@@ -23,7 +24,8 @@ class ProjectForm extends React.Component{
        
         return(
            <div className="project-form-container">
-               {(this.props.currentUser === this.props.project.author_id && this.props.formType === 'Update Project') ? <div><Link to="/"><button onSubmit={this.props.removeProject(this.props.project.id)}>Delete project</button></Link></div> : null}
+               
+               {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ? <div><Link to="/"><button onSubmit={this.props.removeProject(this.props.project.id)}>Delete project</button></Link></div> : null}
                <form className="project-form" onSubmit={this.handleSubmit}>
                     <div className="large-form-box-title">
                         <h2>Start with the basics</h2>
@@ -282,9 +284,17 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                    
                    
                 
-                   
-                   
-                <button className="project-form-submit" type="submit" value={this.props.formType}>Create Project</button>
+                {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
+                <button className="project-form-submit" type="submit" value={this.props.formType}>Update Project</button> :
+                (this.props.formType === 'Create Project') ? <button className="project-form-submit" type="submit" value={this.props.formType}>Create Project</button>:
+                <button className="project-form-submit" onClick={() => this.props.history.push('/')}>Return Home</button>}
+                
+                
+                
+
+                
+                
+                
                </form>
            </div>
         )
