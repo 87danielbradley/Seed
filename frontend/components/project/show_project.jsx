@@ -144,7 +144,7 @@ class ProjectShow extends React.Component{
                 
             </div>
             ) : <div>loading</div>
-            // ) : this.props.history.push('/404')
+            
             ]
 
         

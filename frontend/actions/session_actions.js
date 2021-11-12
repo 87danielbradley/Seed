@@ -23,7 +23,7 @@ export const createUser = (formUser) => dispatch => postUser(formUser)
     .then((user) => dispatch(receiveCurrentUser(user)),
     error => {
         
-        // return dispatch(receiveSessionErrors(error.responseJSON))}
+        
         return dispatch(receiveSessionErrors(error.responseJSON))}
     );
 

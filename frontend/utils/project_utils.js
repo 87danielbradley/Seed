@@ -6,7 +6,7 @@ export const getProjects = (category)=> (
         
     })
 )
-// data: {data}
+
 export const getProject = projectId => (
     $.ajax({
         url: `/api/projects/${projectId}/`,

@@ -5,10 +5,9 @@ import DiscoverItem from "./discover_item";
 class DiscoverView extends React.Component{
      componentDidMount(){
        
-        // this.props.fetchProjects({category: this.props.match.params.category})
         
         this.props.fetchProjects()
-            .then(() => window.scroll({top: 0,behavior: 'smooth'}))
+           
         
     }
     

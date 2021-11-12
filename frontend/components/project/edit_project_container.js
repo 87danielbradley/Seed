@@ -7,9 +7,7 @@ import ProjectForm from './project_form';
 
 
 class EditProjectForm extends React.Component{
-    // constructor(props) {
-    //     super(props)
-    // }
+    
     componentDidMount(){
         this.props.fetchProject(this.props.match.params.projectId)
     }

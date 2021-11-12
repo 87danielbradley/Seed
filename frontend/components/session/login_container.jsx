@@ -19,5 +19,5 @@ const mDTP = (dispatch, ownProps) => ({
     resetErrors: () => dispatch(resetErrors())
 })
 
-// export default connect(mSTP, mDTP)(LoginForm)
+
 export default connect(mSTP, mDTP)(SessionForm)
