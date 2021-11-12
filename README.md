@@ -9,9 +9,6 @@
   + Each project has a show page that shows rewards
   + reactive display for various screen widths from mobile to pc.
 
-![](./app/assets/images/Nov-12-2021 00-46-24.gif)
-
-<img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Nov-12-2021%2000-46-24.gif?raw=true" />
 
 ## Technologies
   + Javascript
@@ -39,10 +36,17 @@
     + BCrypt - used to create password digests with
 
 
+ ## Screen Shots
+ <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Nov-12-2021%2000-46-24.gif?raw=true" />
+  -This is the project show page where you can see and back various rewards
+  
+  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/discovery.gif?raw=true" />
+  - This shows the discovery view with it's responsive view for various screensizes.
+
+  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/seedbed%20form.gif?raw=true" />
+  - This is the form logged in users can see and use to create/update projects.
  
  
- 
- <iframe src="https://giphy.com/embed/grbI0D1qIlCZ0whRPE" width="480" height="322" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/seedbed-grbI0D1qIlCZ0whRPE">via GIPHY</a></p>
 
 
 
