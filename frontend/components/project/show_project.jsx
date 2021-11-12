@@ -17,8 +17,7 @@ class ProjectShow extends React.Component{
 
 
     render(){
-        console.log('state','projectShow', this.props)
-        console.log(this.state)
+        
         const {project} = this.props
         
         
@@ -30,8 +29,7 @@ class ProjectShow extends React.Component{
                 {(this.props.currentUser !== null) ? ((this.props.currentUser.id === this.props.project.author_id) ? <div><Link to={`/projects/${this.props.match.params.projectId}/edit`}>Edit project</Link></div> : null) : null}
 
 
-                {/* {(this.props.currentUser.id === this.props.project.author_id) ? <div><Link to={`/projects/${this.props.match.params.projectId}/edit`}>Edit project</Link></div> : null} */}
-                    
+                   
                 <div className="project-show-top-container">
                     <div className="project-show-title">
                         <h1>{ this.props.project.title }</h1>
