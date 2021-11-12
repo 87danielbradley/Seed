@@ -1,6 +1,10 @@
 # SeedBed
 <a href="https://seedbed.herokuapp.com/#/"> ➤SeedBed Live!</a></li>
 
+Welcome to SeedBed!!  SeedBed is a Kickstarter clone where users can sow seeds and investors and fertilize them through various growth stages.  Each Seed is represented as a project and can be backed for rewards.  
+
+SeedBed is a full stack app with Ruby on Rails/PostgreSQL backend and Javascript React/Redux frontend.
+
  ## Screen Shots
  <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Nov-12-2021%2000-46-24.gif?raw=true" />
   -This is the project show page visible to any user
