@@ -1,33 +1,50 @@
-# Seed
+# SeedBed
+<a href="https://seedbed.herokuapp.com/#/"> ➤SeedBed Live!</a></li>
 
-## MVP List
 
-### 1. [Hosting on Heroku](#) (0.5 days)
-  + Deploy Skeleton to Heroku.
-  
-### 2. [User Authentication](#) (1-2 days)
-  + Unique log-in and log-out splash page.
-  + Allow users to sign up new accounts and login/logout of existing accounts.
-  + Users can view projects without being logged in.  Require ownership and logged in to edit projects.
-  + Appropriate error messages will be displayed when trying to edit Projects or back Projects without being logged in.
-  
-### 3. [Projects](#) (2 days)
-  + Projects be Created/Editted by logged in project owner.
-  
-### 4. [Backing projects & rewards](#) (2 days)
-  + Users can create projects and back projects while signed in.
-  + Users can view projects while logged in and logged out
+## Technologies
+  + Javascript
+  + React
+  + Redux
+  + Ruby on Rails
+  + PostgreSQL
+  + webpack
+  + jbuilder
+  + SCSS
+  + Heroku
+  + Ajax
 
-### 5. [Search](#) (1 day)
+## Archetecture
+  ### Frontend
+    + React/Redux
+    + Javascript
+    + React Router
+    + jQuery/Ajax
+    + React DOM
+    
+   ### Backend
+    + Ruby on Rails
+    + PostgreSQL
+    + BCrypt - used to create password digests with
+
+## Features
+  + Frontend to backend user authentication with hashed passwords using BCrypt
+  + Guests can view all projects without signing in.
+  + Logged in users can Create, Read, Update, and Delete (CRUD) projects.
+  + Users can discover projects by categories or by all
+  + Each project has a show page that shows rewards
+ 
+ 
+ 
+ <iframe src="https://giphy.com/embed/grbI0D1qIlCZ0whRPE" width="480" height="322" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/seedbed-grbI0D1qIlCZ0whRPE">via GIPHY</a></p>
+
+
+
+## Future Endeavors
+
+  +Allow signed in users to back projects
   + Any user can search for projects.
-
-### 6. [Production README](#) (0.5 days)
-
-### 7. [Categories / Discover feature](#)(2 days)
-  + Categories link active projects with category tag.
-
-### 8. [Bonus: Likes]
   + Logged in users can like projects.
-  
-8. [Bonus: Credit card payments](#)(1 day)
+  + Add modals for discover and search
+  + Improve user experience with a UI modal dashboard
   + Logged in users can back projects with active credit card.
