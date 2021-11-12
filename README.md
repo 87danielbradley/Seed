@@ -9,9 +9,9 @@
   + Each project has a show page that shows rewards
   + reactive display for various screen widths from mobile to pc.
 
-![](/app/assets/images/Nov-12-2021 00-46-24.gif)
+![](./app/assets/images/Nov-12-2021 00-46-24.gif)
 
-
+<img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Nov-12-2021%2000-46-24.gif?raw=true" />
 
 ## Technologies
   + Javascript
