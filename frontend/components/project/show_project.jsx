@@ -11,6 +11,7 @@ class ProjectShow extends React.Component{
     }
     componentDidMount(){
         this.props.fetchProject(this.props.match.params.projectId)
+            .then(response => this.setState({project: response}))
     }
     
 
@@ -20,12 +21,16 @@ class ProjectShow extends React.Component{
         console.log(this.state)
         const {project} = this.props
         
+        
         return [
            
             (typeof project !== 'undefined') ? (
             <div className="project-show-main">
                 
-                {(this.props.currentUser.id === this.props.project.author_id) ? <div><Link to={`/projects/${this.props.match.params.projectId}/edit`}>Edit project</Link></div> : null}
+                {(this.props.currentUser !== null) ? ((this.props.currentUser.id === this.props.project.author_id) ? <div><Link to={`/projects/${this.props.match.params.projectId}/edit`}>Edit project</Link></div> : null) : null}
+
+
+                {/* {(this.props.currentUser.id === this.props.project.author_id) ? <div><Link to={`/projects/${this.props.match.params.projectId}/edit`}>Edit project</Link></div> : null} */}
                     
                 <div className="project-show-top-container">
                     <div className="project-show-title">
