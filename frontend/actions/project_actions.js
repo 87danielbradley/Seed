@@ -27,7 +27,7 @@ export const createProject = (projectForm) => dispatch => postProject(projectFor
     .then((project) => dispatch(receiveProject(project)))
 
 export const removeProject = (projectId) => dispatch => deleteProject(projectId)
-    .then(() => dispatch(delProject(projectId)))
+    .then(() => dispatch(deleteProject(projectId)))
 
 export const editProject = (projectForm) => dispatch => updateProject(projectForm)
     .then((project) => dispatch(receiveProject(project)))
