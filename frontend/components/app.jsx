@@ -15,6 +15,7 @@ import { AuthRoute, ProtectedRoute } from "../utils/route_utils";
 import DefaultContainer from "./default/default_container";
 import HomeContainer from "./home/home_container";
 import CategoryBarContainer from "./category_bar/category_bar_container";
+import CreateRewardContainer from "./reward/create_reward_container";
 
 const App = () => (
     <div>
@@ -24,6 +25,7 @@ const App = () => (
 
         <Switch>
             <Route exact path="/" component={HomeContainer} />
+            <ProtectedRoute path="/rewards" component={CreateRewardContainer} />
             <ProtectedRoute path="/projects/:projectId/edit" component={EditProjectContainer} />
             <Route exact path="/projects/:projectId" component={ShowProjectContainer} />
             <Route exact path="/projects" component={IndexProjectContainer} />
