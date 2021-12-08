@@ -8,6 +8,9 @@ import RewardElement from "../reward/reward_view";
 class ProjectShow extends React.Component{
     constructor(props){
         super(props)
+        this.state = {
+            tab: 'campaign'
+        }
     }
     componentDidMount(){
         
@@ -16,7 +19,9 @@ class ProjectShow extends React.Component{
                 window.scroll({top: 0,behavior: 'smooth'});
                 this.setState({project: response})})
     }
-    
+    tabSelect(field){
+        this.setState({tab: field})
+    }
 
 
     render(){
@@ -83,15 +88,15 @@ class ProjectShow extends React.Component{
                     <div className="project-show-tab">
                         <div className="project-show-tab-nav">
                             <div className="tab-button-container">
-                                <button className="project-show-tab-button">Campaign</button>
+                                <button className="project-show-tab-button" onClick={()=> this.tabSelect('campaign')}>Campaign</button>
                             </div>
                             <div className="tab-button-container">
-                                <button className="project-show-tab-button">Risks</button>
+                                <button className="project-show-tab-button" onClick={()=> this.tabSelect('risks')}>Risks</button>
                             </div>
                             <div className="tab-button-container">
-                                <button className="project-show-tab-button">FAQ</button>
+                                <button className="project-show-tab-button" onClick={()=> this.tabSelect('faqs')}>FAQ</button>
                             </div>
-                    
+
                         
                         </div>
                         <div className="project-show-tab-buttons">
@@ -104,9 +109,13 @@ class ProjectShow extends React.Component{
                         </div>
                     </div>
                     <div className="bottom-group">
-                        <div className="bottom-container-sidebar">Story</div>
+                        {(this.state.tab === 'campaign') ? <div className="bottom-container-sidebar">Story</div> : null}
+                        
+                        
                         <div className="bottom-container-med-left">
-                            <h1>{ this.props.project.body }</h1>
+                            {(this.state.tab === 'campaign') ? <h1>{ this.props.project.body }</h1> : (this.state.tab === 'risks') ? <h1>{ this.props.project.risks }</h1> : <h1>No questions yet!</h1>}
+                            {(this.state.tab === 'campaign') ? <h1>{ this.props.project.risks }</h1> : null}
+                            
                         </div>
 
                         <div className="bottom-container-med-right">
@@ -143,7 +152,7 @@ class ProjectShow extends React.Component{
                
                 
             </div>
-            ) : <div>loading</div>
+            ) : null
             
             ]
 

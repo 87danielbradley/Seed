@@ -5,11 +5,13 @@ import ProjectIndex from "./index_project";
 
 
 
-const mSTP= (state = {}, ownProps) => ({
+const mSTP= (state = {}, ownProps) => {
+    debugger
+    return {
     projects: Object.values(state.entities.projects),
     currentUser: state.session.currentUser
     
-})
+}}
 
 const mDTP = (dispatch, ownProps) => ({
     fetchProjects: (data) => dispatch(fetchProjects(data)),
