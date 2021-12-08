@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchProjects } from "../../actions/project_actions";
-import { getProjects } from "../../utils/project_utils";
+
 import CategoryView from "./category_view";
 
 const mSTP= (state = {}, ownProps) => ({

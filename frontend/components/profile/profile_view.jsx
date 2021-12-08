@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileItem from './profile_view_item';
 
 class ProfileView extends React.Component {
     constructor(props){
@@ -19,8 +20,8 @@ class ProfileView extends React.Component {
         <div className="profile-container">
             <div>YOUR ACCOUNT</div>
             <div>CREATED PROJECTs</div>
-            <div></div>
-            <buton onClick={this.handleClick}>Log out</buton>
+            <ProfileItem />
+            <buton className="logout-button" onClick={this.handleClick}>Log out</buton>
         </div>
         );
     }
