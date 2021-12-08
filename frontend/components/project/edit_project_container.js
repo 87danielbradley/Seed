@@ -16,7 +16,7 @@ class EditProjectForm extends React.Component{
         
         if (!this.props.project) return null;
         return (
-            <ProjectForm action={this.props.action} formType={this.props.formType} project={this.props.project} currentUser={this.props.currentUser} removeProject={this.props.removeProject} history={this.props.history}/>
+            <ProjectForm action={this.props.action} formType={this.props.formType} project={this.props.project} currentUser={this.props.currentUser}  history={this.props.history}/>
         )
     }
 }

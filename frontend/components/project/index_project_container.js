@@ -13,8 +13,7 @@ const mSTP= (state = {}, ownProps) => ({
 
 const mDTP = (dispatch, ownProps) => ({
     fetchProjects: (data) => dispatch(fetchProjects(data)),
-    fetchProject: (projectId) => dispatch(fetchProject(projectId)),
-    removeProject: (projectId) => dispatch(removeProject(projectId))
+    fetchProject: (projectId) => dispatch(fetchProject(projectId))
 })
 
 export default connect(mSTP,mDTP)(ProjectIndex);

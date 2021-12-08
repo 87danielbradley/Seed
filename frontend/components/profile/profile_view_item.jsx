@@ -6,12 +6,14 @@ class ProfileItem extends React.Component{
 
     render(){
         return(
-             <div className="profile-container">
-                <div> Project </div>
-                <div> 
-                    <div>edit</div>
-                    <div>delete</div>
+             <div className="profile-item-container">
+                <div><Link to={`/projects/${this.props.project.id}`}>{this.props.project.title}</Link></div>
+                  
+                <div className="profile-edit-delete">
+                    <div><Link to={`/projects/${this.props.project.id}/edit`}>Edit</Link></div>
+                    <div><button onClick={this.props.removeProject}><Link to={`/`}>Delete</Link></button></div>
                 </div>
+                
               
             </div>
         )

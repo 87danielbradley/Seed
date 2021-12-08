@@ -15,10 +15,35 @@
     right: 3%;
     width: 33%;
     max-height: 60%;
-    background: rgba(241, 7, 7, 0.6);
+    background: rgb(255, 255, 255);
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
     // transform: translate(50%, -50%);
 
     .logout-button{
         cursor: pointer;
+    }
+
+
+    .profile-edit-delete{
+        display: flex;
+    }
+    .profile-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5%;
+        gap: 15px;
+    }
+    .profile-item-container{
+        display: flex;
+        
+        justify-content: space-between;
+    }
+
+    .project-list{
+        display: flex;
+        flex-direction: column;
     }
 }

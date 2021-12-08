@@ -25,7 +25,7 @@ class ProjectForm extends React.Component{
         return(
            <div className="project-form-container">
                
-               {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ? <div><Link to="/"><button onSubmit={this.props.removeProject(this.props.project.id)}>Delete project</button></Link></div> : null}
+               {/* {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ? <div><Link to="/"><button onSubmit={() => this.props.removeProject(this.props.project.id)}>Delete project</button></Link></div> : null} */}
                <form className="project-form" onSubmit={this.handleSubmit}>
                     <div className="large-form-box-title">
                         <h2>Start with the basics</h2>

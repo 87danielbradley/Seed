@@ -9,13 +9,13 @@ class ProjectIndex extends React.Component{
         
     }
     render(){
-        const {projects, removeProject} = this.props
+        const {projects} = this.props
         return(
             <div className="discover-main">
                 
                 {projects.map(project=>(
                     <ProjectIndexItem  project={project}
-                                        removeProject={removeProject}/>
+                                       />
                 ))}
                 
             </div>

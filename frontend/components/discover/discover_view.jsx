@@ -13,7 +13,7 @@ class DiscoverView extends React.Component{
     
     render(){
         
-        const {projects, removeProject} = this.props
+        const {projects} = this.props
         
         return[
            
@@ -26,7 +26,7 @@ class DiscoverView extends React.Component{
                 
                 {projects.slice(-12).map(project=>(
                     <DiscoverItem  key={`project${project.id}`} project={project}
-                                        removeProject={removeProject}/>
+                                        />
                 ))}
                 
             </div>
