@@ -4,6 +4,7 @@ import ProfileContainer from "../profile/profile_container";
 export default class ModalView extends React.Component{
     constructor(props){
         super(props);
+        
     }
 
     render(){
@@ -14,7 +15,7 @@ export default class ModalView extends React.Component{
         let component;
         switch (this.props.modal) {
             case 'profile':
-                component = <ProfileContainer />;
+                component = <ProfileContainer closeModal={this.props.closeModal}/>;
                 break;
             default:
                 return null;

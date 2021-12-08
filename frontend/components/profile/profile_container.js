@@ -7,6 +7,7 @@ import ProfileView from "./profile_view"
 
 logout
 const mSTP = (state, ownProps) => {
+    
   return {
     formType: 'profile'
   };
@@ -14,8 +15,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = (dispatch, ownProps) => {
   return {
-    logout: () => dispatch(logout()),
-    closeModal: () => dispatch(closeModal())
+    logout: () => dispatch(logout())
   };
 };
 

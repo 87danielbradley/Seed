@@ -13,16 +13,17 @@ class NavBar extends React.Component{
             modal: 'closed'
         }
         this.openModal = this.openModal.bind(this)
+        this.closeModal = this.closeModal.bind(this)
     }
 
     openModal(){
         
         this.props.openModal('profile')
         this.setState({modal: 'open'})
-        this.setState({modal: 'closed1'})
-        this.setState({modal: 'open2'})
-        this.setState({modal: 'closed3'})
-        this.setState({modal: 'open4'})
+    }
+    closeModal(){
+        this.props.closeModal()
+        this.setState({modal: 'closed'})
     }
     
     render(){
@@ -43,7 +44,7 @@ class NavBar extends React.Component{
                     <Link className='nav-link login-button' to="/login">Log in</Link>
                 )}
                 </div>
-                <ModalContainer key={this.state.modal}/>
+                <ModalContainer key={this.state.modal} closeModal={this.closeModal}/>
             </div>
            
         )
