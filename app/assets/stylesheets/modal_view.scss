@@ -1,0 +1,17 @@
+.modal-main{
+    position: fixed;
+    background: rgba(1,1,1,0.6);
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 30vw;
+    height: 40vw;
+
+}
+
+.modal-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
