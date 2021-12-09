@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CreateRewardContainer from "../reward/create_reward_container";
 
 class ProjectForm extends React.Component{
     constructor(props){
         
         super(props);
-        this.state = this.props.project;
+        this.state = {...this.props.project,
+            rewards: 0
+        };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.addReward = this.addReward.bind(this)
     }
     handleSubmit(event) {
         event.preventDefault();
@@ -19,8 +23,16 @@ class ProjectForm extends React.Component{
         
         return (event) => this.setState({[field]: event.target.value})
     }
+    addReward(e){
+        e.preventDefault()
+        this.setState({rewards: this.state.rewards+1})
+    }
     
     render(){
+        const rewardList = []
+        for(var i = 0; i < this.state.rewards; i++){
+            rewardList.push(<CreateRewardContainer project={this.props.project}/>)
+        }
        
         return(
            <div className="project-form-container">
@@ -281,6 +293,11 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                     </div>
 
                    
+                {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
+                <button className="project-reward-create" onClick={this.addReward}>Add Reward</button> :null}
+                
+                {rewardList.map( element => element)}
+                
                    
                    
                 
