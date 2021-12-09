@@ -186,88 +186,7 @@ Express
 Mongoose to connect and interact with MongoDB
 Axios
 MapBox API
-Code Snippets
-Sample Frontend
-renderMap(){
-    const { lng, lat, zoom } = this.state;
-    const map = new mapboxgl.Map({
-        container: this.mapContainerLogin.current,
-        style: 'mapbox://styles/mapbox/dark-v10',
-        center: [lng, lat],
-        zoom: zoom,
-        bearing: 0
-    });
-    const geocoder = new MapboxGeocoder({
-            accessToken: mapboxgl.accessToken,
-            flyTo:{
-                bearing: (Math.random() < 0.5 ? -1 : 1)*Math.floor(Math.random() * 20),
-                speed: 2,
-                curve: 0.75,
-                pitch: 60,
-                essential: true
-                
-            },
-            mapboxgl: mapboxgl,
-            className: 'geocoder'
-        })
-        const geolocator= new mapboxgl.GeolocateControl({
-            positionOptions: {
-                enableHighAccuracy: false
-            },
-            trackUserLocation: true,
-            className: 'geolocator'
-        })
-    map.addControl(
-        geocoder, 'top-left'
-        )
-    map.addControl(
-        geolocator
-    )
-    let that = this;
-    geocoder.on('result', function(e) {
 
-        that.props.setParentState({location: e.result.geometry.coordinates})
-   
-    })
-    geolocator.on('geolocate', function(e){
-
-        that.props.setParentState({location: [e.coords.latitude, e.coords.longitude]}
-    })
-   
-}
-Sample Backend
-
-router.post('/', 
-    passport.authenticate('jwt', { session: false }),
-    (req, res) => {
-        const { errors, isValid } = validateEventInput(req.body);
-        if (!isValid) {
-            return res.status(400).json(errors)
-        }
-        
-        const newEvent = new Event({
-            user: req.user.id,
-            title: req.body.title,
-            category: req.body.category,
-            date: req.body.date,
-            attendees: req.body.attendees,
-            hidden: req.body.hidden
-        });
-
-        newEvent.save().then(event => res.json(event));
-    }
-)
-
-router.get('/user/:user_id', (req, res) => {
-    
-    Event.find({user: req.params.user_id})
-        .sort({ date: -1 })
-        .then( events => res.json(events))
-        .catch( err => {
-            res.status(404).json({ eventsnotfound: 'This user has not created an event'})
-        })
-
-});
 
 Group Members and Work Breakdown
 Sydney Parsons - Backend/Flex
@@ -280,7 +199,7 @@ Mickey Addai - Frontend/Flex",
     risks: Faker::ChuckNorris.fact, 
     start_date: Faker::Date.between(from: 1.year.ago, to: Date.today), 
     end_date: Faker::Date.between(from: Date.today, to: 1.year.from_now), 
-    url: "https://images.unsplash.com/photo-1634843845395-7f13d40e84de?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fGJEbzQ4Y1Vod25ZfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60")
+    url: "https://github.com/87danielbradley/EcoRoute/blob/main/screenshot.png?raw=true")
 
 Project.create!(
     author_id: 42, 
@@ -404,8 +323,25 @@ Explore variations and multiplayer from separate computers.",
     Project.create!(
     author_id: 42, 
     title: "City Bike Dashboard",
-    description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4), 
-    body: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4), 
+    description: "Cleaned Column names and merged all years in Citi Bike Data Cleaned Column names and merged 2018-2020 in CustomerData Areas of interest did not contain missing values.", 
+    body: "Observations
+1. Age and Gender
+-There are ~3x more male-user trips than female .
+-There is a high usage of citi bikes in Summer-time across all age groups.
+-Highest usage for ages range between 25-35 for 2019.
+ 
+2. User Trips
+-Users are primarily subscribers.
+-Customers are spending more time per ride.
+-The median trip for customers has been growing closer to the 30 min limit(before overage fees), with a current median of ~25min.
+-3:00AM and 2:00PM are the median usage peaks suggesting primary use is commuting.
+ 
+3. Growth
+-New annual subscriptions as been relatively consistant.  However, the average day passes has shown constistant growth around 25%.
+-Average Daily trips have shown consistant growth each year.
+ 
+4. Popular Stations
+-Top 10 starting AND stopping stations are all located in New Jersey.", 
     category_id: 14, 
     location_id: 25, 
     goal: 1000, 
