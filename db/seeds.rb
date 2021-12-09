@@ -140,6 +140,11 @@ Project.create!(author_id: rand(1..seed_users), title: Faker::Lorem.sentence, de
 
 
 
+User.create!(
+    name: "Daniel Bradley", email: "87danielbradley@gmail.com", password: "starwars", location_id: 25, biography: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4))
+
+
+
 for i in 1..seed_faqs do  
     Faq.create!( project_id: rand(1..seed_projects), question: Faker::Lorem.sentence, answer: Faker::Lorem.sentence)
 end
@@ -153,3 +158,258 @@ end
 for i in 1..seed_pledges do  
     Pledge.create!(pledge_id: rand(1..seed_users),pledge_amount: rand(5..1000),reward_id: rand(1..seed_rewards))
 end
+
+
+
+Project.create!(
+    author_id: 42, 
+    title: "Eco Route", 
+    description: "Built with the MERN stack, EcoRoute addresses the age-old question of, “Where should we meet?” while also providing a tool to help people plan out a busy day of errands.", 
+    body: "Background and Overview
+
+Functionality and MVP
+Optimizes a list of address inputs by distance/time. Users will be able to create events where invitees can accept or decline the invitation. By providing a general meeting place, EcoRoute will be able to recommend the most equidistant location to the users attending.
+
+Key Features
+The Map feature at the sign up page allows users to enter their home address where they will likely be doing most of their travels from. This feature utilizes the MapBox API functionality and is showcased below:
+
+ home.address.mp4 
+The CRUD functionality for events allows users to create new events, which are then displayed on the homepage, update and delete events as needed.Users can optionally add attendees from their friends list to the event. This is showcased below:
+
+ event.CRUD.mp4 
+Technologies and Technical Challenges
+React/Redux
+Node
+Bcrypt for salting and hashing passwords
+MongoDB
+Express
+Mongoose to connect and interact with MongoDB
+Axios
+MapBox API
+Code Snippets
+Sample Frontend
+renderMap(){
+    const { lng, lat, zoom } = this.state;
+    const map = new mapboxgl.Map({
+        container: this.mapContainerLogin.current,
+        style: 'mapbox://styles/mapbox/dark-v10',
+        center: [lng, lat],
+        zoom: zoom,
+        bearing: 0
+    });
+    const geocoder = new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            flyTo:{
+                bearing: (Math.random() < 0.5 ? -1 : 1)*Math.floor(Math.random() * 20),
+                speed: 2,
+                curve: 0.75,
+                pitch: 60,
+                essential: true
+                
+            },
+            mapboxgl: mapboxgl,
+            className: 'geocoder'
+        })
+        const geolocator= new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: false
+            },
+            trackUserLocation: true,
+            className: 'geolocator'
+        })
+    map.addControl(
+        geocoder, 'top-left'
+        )
+    map.addControl(
+        geolocator
+    )
+    let that = this;
+    geocoder.on('result', function(e) {
+
+        that.props.setParentState({location: e.result.geometry.coordinates})
+   
+    })
+    geolocator.on('geolocate', function(e){
+
+        that.props.setParentState({location: [e.coords.latitude, e.coords.longitude]}
+    })
+   
+}
+Sample Backend
+
+router.post('/', 
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        const { errors, isValid } = validateEventInput(req.body);
+        if (!isValid) {
+            return res.status(400).json(errors)
+        }
+        
+        const newEvent = new Event({
+            user: req.user.id,
+            title: req.body.title,
+            category: req.body.category,
+            date: req.body.date,
+            attendees: req.body.attendees,
+            hidden: req.body.hidden
+        });
+
+        newEvent.save().then(event => res.json(event));
+    }
+)
+
+router.get('/user/:user_id', (req, res) => {
+    
+    Event.find({user: req.params.user_id})
+        .sort({ date: -1 })
+        .then( events => res.json(events))
+        .catch( err => {
+            res.status(404).json({ eventsnotfound: 'This user has not created an event'})
+        })
+
+});
+
+Group Members and Work Breakdown
+Sydney Parsons - Backend/Flex
+Daniel Bradley - Backend/Flex
+Tyler Koh - Frontend/Flex
+Mickey Addai - Frontend/Flex", 
+    category_id: 14, 
+    location_id: 25, 
+    goal: 50000, 
+    risks: Faker::ChuckNorris.fact, 
+    start_date: Faker::Date.between(from: 1.year.ago, to: Date.today), 
+    end_date: Faker::Date.between(from: Date.today, to: 1.year.from_now), 
+    url: "https://images.unsplash.com/photo-1634843845395-7f13d40e84de?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4fGJEbzQ4Y1Vod25ZfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1296&q=60")
+
+Project.create!(
+    author_id: 42, 
+    title: "Seed Bed", 
+    description: "SeedBed is a Kickstarter clone where users can sow seeds and investors and fertilize them through various growth stages. Each Seed is represented as a project and can be backed for rewards.",
+    body:
+"SeedBed is a full stack app with Ruby on Rails/PostgreSQL backend and Javascript React/Redux frontend.`, 
+    body: `Technologies
+Javascript
+React
+Redux
+Ruby on Rails
+PostgreSQL
+webpack
+jbuilder
+SCSS
+Heroku
+Ajax
+Archetecture
+Frontend
+React/Redux
+Javascript
+React Router
+jQuery/Ajax
+React DOM
+Backend
+Ruby on Rails
+PostgreSQL
+BCrypt - used to hash passwords and create password digests
+Features
+Frontend to backend user authentication with hashed passwords using BCrypt
+Guests can view all projects without signing in.
+Logged in users can Create, Read, Update, and Delete (CRUD) projects.
+Users can discover projects by categories or by all
+Each project has a show page that shows rewards
+reactive display for various screen widths from mobile to pc.
+Future Endeavors
++Allow signed in users to back projects
+
+Any user can search for projects.
+Logged in users can like projects.
+Add modals for discover and search
+Improve user experience with a UI modal dashboard
+Logged in users can back projects with active credit card.", 
+    category_id: 14, 
+    location_id: 25, 
+    goal: 10000, 
+    risks: Faker::ChuckNorris.fact, 
+    start_date: Faker::Date.between(from: 1.year.ago, to: Date.today), 
+    end_date: Faker::Date.between(from: Date.today, to: 1.year.from_now), 
+    url: "https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Screen%20Shot%202021-11-11%20at%209.39.53%20PM.png?raw=true")
+
+
+Project.create!(
+    author_id: 42, 
+    title: "Node Dominance", 
+    description: "This game is a single page app developed in Javascript", 
+    body: "Node Dominance is an interactive game project. It is based off the game Sprouts created by John Horton Conway and Micheal S. Paterson in the 1960s. The original game is played with paper and pencil. When you open the app you will have a new game generated with a default of two nodes.
+
+This game will allow variations in gameplay by allowing the players to increase the starting nodes.
+
+Rules of the game
+The game is played with two players with at least two starting nodes. The two players take turns by connecting two nodes with an unbroken line. This line may not intersect other lines or nodes before reaching the target node. Following a legal move, a new node is created along the newly created line. Each node may have a maximum of 3 connections. The player left without a legal move is the loser.
+
+Functionality & MVPs
+With Node Dominance, users will be able to:
+
+Reset the game board
+Draw a custom path to connect nodes
+Choose from preset initial states
+Select player color
+Also included:
+
+Help icon describing rules of the game
+Sound with Toggle button
+A production README
+Wireframes
+
+
+Navigation links to my Github repo, LinkedIn, Portfolio
+On the left, there will be selectable colors for each player
+On the right, there will be different themes to select
+In the upper right will be and option to remove sound
+There will be a help icon in the lower right
+There will be a reset game button and an option to add starting nodes
+Game Play
+
+
+Technologies, Libraries, APIs
+This project will be implemented with the following technologies:
+
+Canvas to render the game board
+Webpack
+Paper.js to work with vectors
+Implementation Timeline
+Friday Afternoon & Weekend: Setup project; getting webpack up and running, have canvas render to screen. Create Board, Player, Node classes. Render intial state of board in canvas.
+
+Monday: Dedicate this day to the underlying logic of Node Dominance.
+
+Tuesday: Get the game to correctly render to canvas. Then focus on rendering lines and additional nodes.
+
+Wednesday: Finish implementing controls, and focus on styling and ensuring all links work.
+
+Thursday Morning: Deploy game and rewrite proposal as production.
+
+Bonus feature
+Add a number to each node representing the number available branches from node
+Add additional randomly populated nodes
+Add motion effects to line while drawing
+Highlight available moves
+Highlight legal moves from a specific node
+Explore variations and multiplayer from separate computers.", 
+    category_id: 14, 
+    location_id: 25, 
+    goal: 10000, 
+    risks: Faker::ChuckNorris.fact, 
+    start_date: Faker::Date.between(from: 1.year.ago, to: Date.today), 
+    end_date: Faker::Date.between(from: Date.today, to: 1.year.from_now), 
+    url: "https://raw.githubusercontent.com/87danielbradley/NodeDominance/main/screenShot.png")
+
+    Project.create!(
+    author_id: 42, 
+    title: "City Bike Dashboard",
+    description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4), 
+    body: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4), 
+    category_id: 14, 
+    location_id: 25, 
+    goal: 1000, 
+    risks: Faker::ChuckNorris.fact, 
+    start_date: Faker::Date.between(from: 1.year.ago, to: Date.today), 
+    end_date: Faker::Date.between(from: Date.today, to: 1.year.from_now), 
+    url: "https://camo.githubusercontent.com/5cd9a3653373b2389b7a776a63938736347fc9f703d9d3ca4e598dd1530ad571/68747470733a2f2f7075626c69632e7461626c6561752e636f6d2f7374617469632f696d616765732f63692f636974695f62696b655f7075626c69632f53746f72792f315f7273732e706e67")

@@ -18,9 +18,9 @@
 #
 class Project < ApplicationRecord
     validates :author_id, presence: true
-    validates :title, presence: true, length: {maximum: 50}
-    validates :description, presence: true, length: {maximum: 300}
-    validates :body, presence: true, length: {maximum: 1000}
+    validates :title, presence: true, length: {maximum: 100}
+    validates :description, presence: true, length: {maximum: 10000}
+    validates :body, presence: true, length: {maximum: 10000}
     validates :category_id, presence: true
     validates :location_id, presence: true
     validates :start_date, presence: true
