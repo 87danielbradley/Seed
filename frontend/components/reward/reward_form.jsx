@@ -5,7 +5,9 @@ class RewardForm extends React.Component{
     constructor(props){
         
         super(props);
-        this.state = this.props.reward;
+        this.state = {...this.props.reward,
+            project_id: this.props.project.id
+        }
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -159,9 +161,8 @@ class RewardForm extends React.Component{
                    
                    
                 
-                {(this.props.currentUser.id === this.props.reward.author_id && this.props.formType === 'Update reward') ?       
-                <button className="reward-form-submit" type="submit" value={this.props.formType}>Update reward</button> :
-                (this.props.formType === 'Create reward') ? <button className="reward-form-submit" type="submit" value={this.props.formType}>Create reward</button>:
+                {(this.props.currentUser.id === this.props.project.author_id) ?       
+                <button className="reward-form-submit" type="submit" value={this.props.formType}>Add reward</button> :
                 <button className="reward-form-submit" onClick={() => this.props.history.push('/')}>Return Home</button>}
                 
                 

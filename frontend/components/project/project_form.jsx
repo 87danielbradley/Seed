@@ -292,11 +292,11 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                         </div>
                     </div>
 
+                    {rewardList.map( element => element)}
                    
                 {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
                 <button className="project-reward-create" onClick={this.addReward}>Add Reward</button> :null}
                 
-                {rewardList.map( element => element)}
                 
                    
                    
