@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CreateProjectContainer from "../project/create_project_container";
 import { createUser } from "../../actions/session_actions";
+import SearchContainer from "../search/search_container";
 
 import ModalContainer from "../modal/modal_container";
 
@@ -10,10 +11,12 @@ class NavBar extends React.Component{
        
         super(props);
         this.state = {
-            modal: 'closed'
+            modal: 'closed',
+            search: 'closed'
         }
-        this.openModal = this.openModal.bind(this)
-        this.closeModal = this.closeModal.bind(this)
+        this.openModal = this.openModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+        this.searchClick = this.searchClick.bind(this);
     }
     
     componentDidMount(){
@@ -31,6 +34,12 @@ class NavBar extends React.Component{
         this.props.closeModal()
         this.setState({modal: 'closed'})
     }
+
+    searchClick(event){
+        // event.preventDefault()
+        (this.state.search === "closed" ? this.setState({search: 'open'}) : this.setState({search: 'closed'}))
+
+    }
     
     render(){
         
@@ -43,7 +52,8 @@ class NavBar extends React.Component{
                 </div>
                 <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED <i className="fas fa-seedling"></i></Link></h1>
                 <div>
-                <Link className="nav-link " to="/">Search <i className="fas fa-search"></i></Link>
+                {this.state.search === 'open' ? <SearchContainer key={this.state.search} searchClick={this.searchClick}/> : null} 
+                <button className="nav-link " onClick={this.searchClick}>Search <i className="fas fa-search"></i></button>
                 {this.props.currentUser ? (
                     <button className="navbar-logout" onClick={this.openModal}><i className="fas fa-globe"></i></button>
                 ):(
