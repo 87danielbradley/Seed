@@ -47,7 +47,7 @@ class ProjectShow extends React.Component{
                         <div className="show-el project-show-picture"><img src={this.props.project.url}/>
                         
                         </div>
-                        <div className="picture-links"> <span><i className="fas fa-seedling"></i>Projects we love      </span><span><i className="far fa-compass"></i>{this.props.project.category}      </span><span><i className="fas fa-map-marker-alt"></i>{this.props.project.location}      </span></div>
+                        <div className="picture-links"> <span><i className="fas fa-seedling"></i>     Projects we love      </span><span><i className="far fa-compass"></i>     {this.props.project.category}      </span><span><i className="fas fa-map-marker-alt"></i>     {this.props.project.location}      </span></div>
                         </div>
                     <div className="show-el project-show-stats">
                         <div className="progress-container"><div className="progress-bar" style={{width: `${Number(100*this.props.project.pledged_amt/this.props.project.goal).toFixed(0)}%`}}></div></div>
