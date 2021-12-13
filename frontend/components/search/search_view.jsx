@@ -60,6 +60,7 @@ class SearchBar extends React.Component{
                 event.stopPropagation()}}>
                 <div className="search-bar">
                     <input
+                    onClick={(event) => event.stopPropagation()}
                     className="search-input"
                     onChange={this.update}
                     value={this.state.query}
