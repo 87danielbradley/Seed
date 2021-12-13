@@ -19,8 +19,8 @@ class HomeView extends React.Component{
                 
                 <div className="home-med-container-left">
                     <h4>FEATURED PROJECT</h4>
-                    <div className="cat-picture-main"><Link to="projects/53"><img id="nodedominance" src="https://github.com/87danielbradley/NodeDominance/blob/main/screenShot.png?raw=true"/> </Link></div>
-                    <h1><Link to="projects/53">Node Dominance</Link></h1>
+                    <div className="cat-picture-main"><Link to="projects/52"><img id="nodedominance" src="https://github.com/87danielbradley/NodeDominance/blob/main/screenShot.png?raw=true"/> </Link></div>
+                    <h1><Link to="projects/52">Node Dominance</Link></h1>
                     <h2>This game is a single page app developed in Javascript</h2>
                     <h3><a href="https://github.com/87danielbradley/NodeDominance">By Daniel Bradley</a></h3>
 
@@ -38,9 +38,9 @@ class HomeView extends React.Component{
                     <div className="category-container">
                         
                         <div className="rec-container">
-                            <div className="small-pic"> <Link to="projects/52"><img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Screen%20Shot%202021-11-11%20at%209.39.53%20PM.png?raw=true"/></Link></div>
+                            <div className="small-pic"> <Link to="projects/51"><img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/Screen%20Shot%202021-11-11%20at%209.39.53%20PM.png?raw=true"/></Link></div>
                             <div className="rec-stats">
-                                <h1><Link to="projects/52">Kickstarter Clone</Link></h1>
+                                <h1><Link to="projects/51">Kickstarter Clone</Link></h1>
                                 <h2>{`75% funded`}</h2>
                                 <h3><a href="https://github.com/87danielbradley/Seed">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
@@ -53,9 +53,9 @@ class HomeView extends React.Component{
                         </div>
 
                         <div className="rec-container">
-                            <div className="small-pic"> <Link to="projects/54"> <img src="https://camo.githubusercontent.com/5cd9a3653373b2389b7a776a63938736347fc9f703d9d3ca4e598dd1530ad571/68747470733a2f2f7075626c69632e7461626c6561752e636f6d2f7374617469632f696d616765732f63692f636974695f62696b655f7075626c69632f53746f72792f315f7273732e706e67"/></Link></div>
+                            <div className="small-pic"> <Link to="projects/53"> <img src="https://camo.githubusercontent.com/5cd9a3653373b2389b7a776a63938736347fc9f703d9d3ca4e598dd1530ad571/68747470733a2f2f7075626c69632e7461626c6561752e636f6d2f7374617469632f696d616765732f63692f636974695f62696b655f7075626c69632f53746f72792f315f7273732e706e67"/></Link></div>
                             <div className="rec-stats">
-                                <h1><Link to="projects/54"> City Bike Dashboard</Link></h1>
+                                <h1><Link to="projects/53"> City Bike Dashboard</Link></h1>
                                 <h2>{`100% funded`}</h2>
                                 <h3><a href="https://github.com/87danielbradley/Tableau-Challenge">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
@@ -68,9 +68,9 @@ class HomeView extends React.Component{
                         </div>
 
                         <div className="rec-container">
-                            <div className="small-pic"> <Link to="projects/51"><img src="https://github.com/87danielbradley/EcoRoute/blob/main/screenshot.png?raw=true"/></Link></div>
+                            <div className="small-pic"> <Link to="projects/50"><img src="https://github.com/87danielbradley/EcoRoute/blob/main/screenshot.png?raw=true"/></Link></div>
                             <div className="rec-stats">
-                                <h1><Link to="projects/51">Eco Route</Link></h1>
+                                <h1><Link to="projects/50">Eco Route</Link></h1>
                                 <h2>{`25% funded`}</h2>
                                 <h3><a href="https://github.com/87danielbradley/EcoRoute">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
