@@ -6,7 +6,7 @@ import ProjectIndex from "./index_project";
 
 
 const mSTP= (state = {}, ownProps) => {
-    debugger
+    
     return {
     projects: Object.values(state.entities.projects),
     currentUser: state.session.currentUser

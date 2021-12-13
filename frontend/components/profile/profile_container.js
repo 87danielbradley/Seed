@@ -8,7 +8,7 @@ import { fetchProjects, removeProject } from "../../actions/project_actions";
 
 logout
 const mSTP = (state, ownProps) => {
-    debugger
+    
     const projectList = (state.session.currentUser ? Object.values(state.entities.projects).filter(project => project.author_id === state.session.currentUser.id) : [])
   return {
     formType: 'profile',

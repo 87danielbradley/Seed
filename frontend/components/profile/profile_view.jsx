@@ -16,7 +16,7 @@ class ProfileView extends React.Component {
             .then(()=>this.props.closeModal)
     }
     render() {
-        debugger
+        
         return (
         <div className="profile-container">
             <div>YOUR ACCOUNT</div>

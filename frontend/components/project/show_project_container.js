@@ -5,7 +5,7 @@ import ProjectShow from './show_project';
 
 
 const mSTP= (state = {}, ownProps) => {
-    debugger
+    
     return {project: state.entities.projects[ownProps.match.params.projectId],
             currentUser: state.session.currentUser}
     
