@@ -38,12 +38,12 @@ class CategoryView extends React.Component{
                     <h3>{this.props.projects[0].author}</h3>
 
                     <div className="featured-links">
-                        <button className="featured-remind"><i className="far fa-bookmark"></i>   Remind me</button>
+                        {/* <button className="featured-remind"><i className="far fa-bookmark"></i>   Remind me</button>
 
                         <div className="featured-likes">
                             <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
                             <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button>
-                        </div> 
+                        </div>  */}
                     </div>
                 </div>
                 
