@@ -25,12 +25,12 @@ class HomeView extends React.Component{
                     <h3><a href="https://github.com/87danielbradley/NodeDominance">By Daniel Bradley</a></h3>
 
                     <div className="featured-links">
-                        <button className="featured-remind"><i className="far fa-bookmark"></i> Remind me</button>
+                        {/* <button className="featured-remind"><i className="far fa-bookmark"></i> Remind me</button>
 
                         <div className="featured-likes">
                             <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
                             <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button>
-                        </div> 
+                        </div>  */}
                     </div>
                 </div>
                 
@@ -44,9 +44,9 @@ class HomeView extends React.Component{
                                 <h2>{`75% funded`}</h2>
                                 <h3><a href="https://github.com/87danielbradley/Seed">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
-                                    <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
+                                    {/* <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
                                     <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
-                                    <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button>
+                                    <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button> */}
                                 </div>
                             </div>
                         
@@ -59,9 +59,9 @@ class HomeView extends React.Component{
                                 <h2>{`100% funded`}</h2>
                                 <h3><a href="https://github.com/87danielbradley/Tableau-Challenge">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
-                                    <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
+                                    {/* <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
                                     <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
-                                    <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button>
+                                    <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button> */}
                                 </div>
                             </div>
                         
@@ -74,9 +74,9 @@ class HomeView extends React.Component{
                                 <h2>{`25% funded`}</h2>
                                 <h3><a href="https://github.com/87danielbradley/EcoRoute">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
-                                    <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
+                                    {/* <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
                                     <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
-                                    <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button>
+                                    <button className="rec-stats-icons"><i className="far fa-thumbs-down"></i></button> */}
                                 </div>
                             </div>
                         
@@ -88,7 +88,7 @@ class HomeView extends React.Component{
         
                     </div>
                     <div>
-                        tabs
+                        
                     </div>
                 </div>
                 
