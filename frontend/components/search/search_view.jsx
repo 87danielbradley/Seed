@@ -38,7 +38,8 @@ class SearchBar extends React.Component{
 
     }
     selectProject(event){
-        const project = event.currentTarget.innerText;
+
+        // const project = event.currentTarget.innerText;
         this.props.searchClick()
 
     }
