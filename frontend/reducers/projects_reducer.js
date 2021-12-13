@@ -8,7 +8,12 @@ const projectsReducer = (state = {}, action) => {
         case RECEIVE_PROJECTS:
             return action.projects;
         case RECEIVE_PROJECT:
+            if (Object.values(state).filter( project => project.id === action.project.id).length > 0){
+            return state
+        } else {
             return Object.assign({}, state, {[action.project.id]: action.project})
+
+            }
         case REMOVE_PROJECT:
             let nextState = Object.assign({}, state)
             delete nextState.entities[action.projectId];
