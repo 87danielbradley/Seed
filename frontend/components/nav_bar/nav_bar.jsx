@@ -46,14 +46,14 @@ class NavBar extends React.Component{
         return(
             
             <div className="nav-bar">
-                <div>
+                <div className="table">
                 <Link className="nav-link" to="/discover">Discover</Link>
                 <Link className="nav-link" to="/start" >Start a project</Link>
                 </div>
                 <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED <i className="fas fa-seedling"></i></Link></h1>
                 <div>
                 {this.state.search === 'open' ? <SearchContainer key={this.state.search} searchClick={this.searchClick}/> : null} 
-                <button className="nav-link " onClick={this.searchClick}>Search <i className="fas fa-search"></i></button>
+                <button className="nav-link nav-button" onClick={this.searchClick}>Search <i className="fas fa-search"></i></button>
                 {this.props.currentUser ? (
                     <button className="navbar-logout" onClick={this.openModal}><i className="fas fa-globe"></i></button>
                 ):(

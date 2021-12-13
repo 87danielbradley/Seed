@@ -60,6 +60,7 @@ class SearchBar extends React.Component{
                 event.stopPropagation()}}>
                 <div className="search-bar">
                     <input
+                    className="search-input"
                     onChange={this.update}
                     value={this.state.query}
                     placeholder="Search for projects or categories"

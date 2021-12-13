@@ -20,13 +20,14 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
 }
 
 .home-med-container-left{
-    
-    width: 49.3vw;
+    display: flex;
+    justify-content: right;
+    width: 50vw;
     height: 80vh;
     border-bottom: solid;
     border-color: lightgrey;
     border-width: 1px;
-
+    
     .featured-links{
         display: flex;
         justify-content: space-between;
@@ -38,12 +39,14 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
 }
 .home-med-container-right{
     
-    width: 40.7vw;
+    width: 33vw;
     height: 80vh;
     border-bottom: solid;
     border-left: solid;
     border-color: lightgrey;
     border-width: 1px;
+    padding-left: 5vw;
+    right: 5vw;
 }
 
 .home-main{
@@ -54,13 +57,19 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
     justify-content: space-between;
 
     h1{
+        // margin: auto;
         margin-top: 20px;
         font-size: 24px;
         margin-bottom: 5px;
     }
     h2{
-        font-size: 16px;
+        font-size: 24px;
+        top: 0px;
+        // margin: auto;
         margin-bottom: 20px;
+    }
+    .label-center{
+        margin: auto;
     }
 }
 
@@ -188,6 +197,7 @@ $body-font :'Zen Kaku Gothic Antique', sans-serif;
       }
       .home-med-container-right{
           width: 100vw;
+
       }
   }
 
