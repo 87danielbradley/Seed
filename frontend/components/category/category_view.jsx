@@ -26,8 +26,8 @@ class CategoryView extends React.Component{
             (projects.length > 0) ? (
             <div className="home-main">
                 
-                <h1>{this.props.projects[0].category}</h1>
-                <h2>Explore {this.props.projects[0].category} from Seedbed's community.</h2>
+                <h1 className="label-center">{this.props.projects[0].category}</h1>
+                <h2 className="label-center">Explore {this.props.projects[0].category} from Seedbed's community.</h2>
             <div className="home-large-container">
                 
                 <div className="home-med-container-left">
@@ -54,7 +54,7 @@ class CategoryView extends React.Component{
                         <CategoryItem project={this.props.projects[(myRandom+3)%myLength]}/>
                     </div>
                     <div>
-                        tabs
+                        
                     </div>
                 </div>
                 
