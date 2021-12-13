@@ -73,7 +73,7 @@ class ProjectShow extends React.Component{
                         <div>
 
                             </div>
-                            <p><span >All or nothing.</span> This project will only be funded if it reaches its goal by {new Date(this.props.project.end_date).toString()}.</p>
+                            <p className="card-paragraph"><span >All or nothing.</span> This project will only be funded if it reaches its goal by {new Date(this.props.project.end_date).toString()}.</p>
                         </div>
                     
                     </div>
