@@ -11,6 +11,13 @@ $seed-font :'Modak', cursive;
 $body-font :'Zen Kaku Gothic Antique', sans-serif;
 
 
+.space-below{
+    padding-bottom: 20px;
+}
+.space-above{
+    padding-top: 20px;
+}
+
 .home-large-container{
     display: flex;
     justify-content: space-around;

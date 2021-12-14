@@ -14,7 +14,7 @@ class HomeView extends React.Component{
         return(
             <div className="home-main">
             <h1 className="label-center">Creative work shows us what’s possible.</h1>
-            <h2 className="label-center">Help fund it here.</h2>
+            <h2 className="label-center space-below">Help fund it here.</h2>
             <div className="home-large-container">
                 
                 <div className="home-med-container-left">

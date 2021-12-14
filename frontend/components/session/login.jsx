@@ -36,7 +36,7 @@ class LoginForm extends React.Component{
     render(){
         return (
             <div className="session-form">
-                <h3>Log in</h3>
+                <h3 className="padding-left">Log in</h3>
                 {this.sessionErrors()}
                 <form>
                     <label>Email:

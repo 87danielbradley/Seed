@@ -105,7 +105,7 @@ class ProjectShow extends React.Component{
 
                                 behavior: 'smooth'
                                 })}>Seed this project</button>
-                            <button className="button-remind"><i className="far fa-bookmark"></i> Remind me</button>
+                            {/* <button className="button-remind"><i className="far fa-bookmark"></i> Remind me</button> */}
                         </div>
                     </div>
                     <div className="bottom-group">

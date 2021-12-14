@@ -4,6 +4,15 @@
     border-radius: 50%;
 
 }
+.inline-block{
+    display: inline-block;
+    padding-bottom: 50px;
+}
+
+.padding-left{
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .session-form-window{
     display: flex;
     justify-content: center;

@@ -52,17 +52,17 @@ class SessionForm extends React.Component{
 
                     {this.props.formType === 'Sign up'?
                         <div className="form-item">
-                            <h3 className="line-below">Have an account? {this.props.navLink}</h3>
+                            <h3 className="line-below padding-left">Have an account? {this.props.navLink}</h3>
                         </div>: 
                         null
                     }
                     
                     {this.props.formType === 'Sign up'?
                         <div className="form-item">
-                            <h3 className="form-item">{this.props.formType}</h3>
+                            <h3 className="form-item padding-left">{this.props.formType}</h3>
                         </div>: 
                         <div>
-                            <h3 className="form-item session-form-title">{this.props.formType}</h3>
+                            <h3 className="form-item session-form-title padding-left">{this.props.formType}</h3>
                         </div>
                     }
                     {this.sessionErrors()}
@@ -104,25 +104,25 @@ class SessionForm extends React.Component{
                         
                         {this.props.formType === 'Sign up'?<div className="form-item display-flex">
                             
-                            <label className="form-item">
+                            <label className="form-item padding-left inline-block">
                             <input 
                                 type="checkbox"
                             />Send me a weekly mix of handpicked projects, plus occasional SeedBed news
                             </label> 
-                        <label className="form-item">
-                            <input 
+                        <label className="form-item padding-left inline-block">
+                            {/* <input 
                                 type="checkbox"
-                            />Contact me about participating in SeedBed research
+                            />Contact me about participating in SeedBed research */}
                         </label> 
-                        </div>: <div><label className="form-item">
+                        </div>: <div className="padding-left"><label className="form-item">
                             <input 
                                 type="checkbox"
                             />Remember me
                         </label>
-                        <div className="form-item">
+                        <div className="form-item padding-left">
                             <p>New to SeedBed? {this.props.navLink}</p>
                         </div>
-                        <div className="form-item">
+                        <div className="form-item padding-left">
                             <p>This site is protected by reCAPTCHA and the <a href="/" >Google Privacy Policy</a> and <a href="/" >Terms of Service</a> apply</p>
                         </div>
                         </div>}
