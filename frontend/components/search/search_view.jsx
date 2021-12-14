@@ -58,7 +58,7 @@ class SearchBar extends React.Component{
                         <div className="flex-col">
                             <h2>{ele.title}</h2>
                             <h3>by {ele.author}</h3>
-                            <h3>{`${Number(100*ele.pledged_amt/ele.goal).toFixed(0)}% funded`}  {`${Math.ceil(((new Date(ele.end_date.split('T')[0]))-(new Date()))/(1000 * 3600 * 24))} days to go`}</h3>
+                            <h3><strong>{`${Number(100*ele.pledged_amt/ele.goal).toFixed(0)}% funded`}</strong>  {`${Math.ceil(((new Date(ele.end_date.split('T')[0]))-(new Date()))/(1000 * 3600 * 24))} days to go`}</h3>
                         </div>
                     
 
