@@ -26,3 +26,24 @@
     width: 100vw;
     height: 11vh;
 }
+.search-results{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    width: 50vw;
+    background: white;
+    overflow: auto;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}

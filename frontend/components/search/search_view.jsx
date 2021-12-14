@@ -52,7 +52,23 @@ class SearchBar extends React.Component{
     render(){
         const results = this.matches().slice(0,10).map((ele, idx) => {
             return (
-                <li key={idx} onClick={()=>this.selectProject()}><Link to={`projects/${ele.id}`}>{ele.title}</Link></li>
+                <li className="search-results" key={idx} onClick={()=>this.selectProject()}><Link to={`projects/${ele.id - 1}`}>
+                    <div className="flex-row">
+                        <img src={ele.url} width="100" height="75"/>
+                        <div className="flex-col">
+                            <h3>{ele.title}</h3>
+                            <h3>by {ele.author}</h3>
+                            <h3>{`${Number(100*ele.pledged_amt/ele.goal).toFixed(0)}% funded`}  {`${Math.ceil(((new Date(ele.end_date.split('T')[0]))-(new Date()))/(1000 * 3600 * 24))} days to go`}</h3>
+                        </div>
+                    
+
+
+                    </div>
+                    
+                    
+                    
+                    
+                    </Link></li>
             )
         })
         return(
@@ -61,6 +77,7 @@ class SearchBar extends React.Component{
                 event.stopPropagation()}}>
                 <div className="search-bar">
                     <input
+                    className="padding-left"
                     onClick={(event) => event.stopPropagation()}
                     className="search-input"
                     onChange={this.update}
@@ -69,7 +86,7 @@ class SearchBar extends React.Component{
                     >
 
                     </input>
-                    <ul>
+                    <ul className="padding-left search-results">
                         {results}
                     </ul>
                 

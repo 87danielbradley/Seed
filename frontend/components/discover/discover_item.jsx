@@ -8,7 +8,7 @@ class DiscoverItem extends React.Component{
         return(
              <div className="discover-container">
                 
-                <div className="discover-photo"><Link to={`/projects/${this.props.project.id}`}><img src={this.props.project.url}/></Link></div>
+                <div className="discover-photo"><Link to={`/projects/${this.props.project.id-1}`}><img src={this.props.project.url}/></Link></div>
                 <div className="discover-body">
                     <Link to={`/projects/${this.props.project.id-1}`} className="discover-link">{this.props.project.title}</Link>
                     <h3>{this.props.project.description}</h3>
