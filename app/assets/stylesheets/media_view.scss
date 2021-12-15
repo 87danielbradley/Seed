@@ -6,11 +6,9 @@
     font-size: 14px;
     .social-links{
         display: flex;
-        gap: 20px;
-        *{
-            height: 22px;
-            width: 22px;
-        }
+        gap: 50px;
+        transform: translate(-100px)
+        
     }
     img{
         width: 15px;
