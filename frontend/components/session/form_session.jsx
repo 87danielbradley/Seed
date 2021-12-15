@@ -34,7 +34,7 @@ class SessionForm extends React.Component{
     }
     sessionErrors(){
         return(
-            <ul >
+            <ul className="session-errors padding-left">
                 {this.props.errors.map((error,i) => (
                     <li key={`${error}-${i}`}>{error}</li>
                 ))}
@@ -65,7 +65,8 @@ class SessionForm extends React.Component{
                             <h3 className="form-item session-form-title padding-left">{this.props.formType}</h3>
                         </div>
                     }
-                    {this.sessionErrors()}
+                    {this.props.errors.length > 0 ? this.sessionErrors() : null}
+                   
                     
                     
 

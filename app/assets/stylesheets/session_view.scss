@@ -8,6 +8,9 @@
     display: inline-block;
     padding-bottom: 50px;
 }
+.session-errors{
+    color: red;
+}
 
 .padding-left{
     padding-left: 5px;
@@ -25,27 +28,33 @@
 .session-form{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   
     background: white;
     margin: auto;
-    margin: 5% 25% 0% 25%;
-    transform: translateY(5vh);
+    margin-top: 5%;
     width: 333px;
-    height: 80vh;
+    position: relative;
+    height: auto;
+    padding-bottom: 50px;
+    
+    
+   
 
     *{
+       
         
         margin-top: 2vh;
-        margin-bottom: 2vh;
+        padding-bottom: 5px;
+        
     }
     
 }
 
 .form-session{
-    
+    top: 0;
     display:flex;
     margin: auto;
-    justify-content: space-between;
+    justify-content: start;
     
     flex-direction: column;
     
