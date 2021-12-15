@@ -13,8 +13,8 @@ class RewardForm extends React.Component{
     }
     handleSubmit(event) {
         event.preventDefault();
-        this.props.action(this.state);
-        this.props.history.push(`/`)
+        this.props.createReward(this.state);
+        
     }
 
     update(field){
@@ -27,7 +27,7 @@ class RewardForm extends React.Component{
         return(
            <div className="reward-form-container">
                
-               <form className="reward-form" onSubmit={this.handleSubmit}>
+               <div className="reward-form" onSubmit={this.handleSubmit}>
                     <div className="large-form-box-title">
                         <h2>Add your rewards</h2>
                         <h3>Offer simple, meaningful ways to bring backers closer to your project and celebrate it coming to life.</h3>
@@ -167,7 +167,7 @@ class RewardForm extends React.Component{
                 
                 
                 
-               </form>
+               </div>
            </div>
         )
     }

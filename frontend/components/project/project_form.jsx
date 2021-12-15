@@ -7,18 +7,22 @@ class ProjectForm extends React.Component{
         
         super(props);
         this.state = {...this.props.project,
-            rewards: 0
+            rewards: 0,
+            tab: 'basics'
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.addReward = this.addReward.bind(this)
     }
     handleSubmit(event) {
+        debugger
         event.preventDefault();
         this.props.action(this.state);
         this.props.history.push(`/`)
     }
-
+    tabSelect(field){
+        this.setState({tab: field})
+    }
     update(field){
         
         return (event) => this.setState({[field]: event.target.value})
@@ -38,6 +42,21 @@ class ProjectForm extends React.Component{
            <div className="project-form-container">
                
                {/* {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ? <div><Link to="/"><button onSubmit={() => this.props.removeProject(this.props.project.id)}>Delete project</button></Link></div> : null} */}
+               {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
+                <div className="project-edit-tab-nav">
+                        <div className="tab-button-container">
+                            <button className="project-edit-tab-button" onClick={()=> this.tabSelect('basics')}>Basics</button>
+                        </div>
+                        <div className="tab-button-container">
+                            <button className="project-edit-tab-button" onClick={()=> this.tabSelect('rewards')}>Rewards</button>
+                        </div>
+                            
+
+                        
+                </div> :null}
+               
+               {(this.state.tab === 'basics')?
+               
                <form className="project-form" onSubmit={this.handleSubmit}>
                     <div className="large-form-box-title">
                         <h2>Start with the basics</h2>
@@ -294,7 +313,16 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
 
                     {rewardList.map( element => element)}
                    
-                {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
+                
+                
+                
+                
+
+                
+                
+                
+               </form>:
+               (this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
                 <button className="project-reward-create" onClick={this.addReward}>Add Reward</button> :null}
                 
                 
@@ -305,14 +333,7 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                 <button className="project-form-submit" type="submit" value={this.props.formType}>Update Project</button> :
                 (this.props.formType === 'Create Project') ? <button className="project-form-submit" type="submit" value={this.props.formType}>Create Project</button>:
                 <button className="project-form-submit" onClick={() => this.props.history.push('/')}>Return Home</button>}
-                
-                
-                
-
-                
-                
-                
-               </form>
+               
            </div>
         )
     }

@@ -21,7 +21,7 @@ const mSTP= (state = {}, ownProps) => {
 };
 
 const mDTP = (dispatch, ownProps) => ({
-    action: (reward) => dispatch(createReward(reward))
+    createReward: (reward) => dispatch(createReward(reward))
 });
 
 export default connect(mSTP,mDTP)(RewardForm);
