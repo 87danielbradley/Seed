@@ -22,7 +22,7 @@ class HomeView extends React.Component{
                     <div className="cat-picture-main"><Link to="projects/52"><img id="nodedominance" src="https://github.com/87danielbradley/NodeDominance/blob/main/screenShot.png?raw=true"/> </Link></div>
                     <h1><Link to="projects/52">Node Dominance</Link></h1>
                     <h2>This game is a single page app developed in Javascript</h2>
-                    <h3><a href="https://github.com/87danielbradley/NodeDominance">By Daniel Bradley</a></h3>
+                    <h3><a href="https://github.com/87danielbradley/NodeDominance" target="_blank">By Daniel Bradley</a></h3>
 
                     <div className="featured-links">
                         {/* <button className="featured-remind"><i className="far fa-bookmark"></i> Remind me</button>
@@ -42,7 +42,7 @@ class HomeView extends React.Component{
                             <div className="rec-stats">
                                 <h1><Link to="projects/51">Kickstarter Clone</Link></h1>
                                 <h2>{`75% funded`}</h2>
-                                <h3><a href="https://github.com/87danielbradley/Seed">By Daniel Bradley</a></h3>
+                                <h3><a href="https://github.com/87danielbradley/Seed" target="_blank">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
                                     {/* <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
                                     <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
@@ -57,7 +57,7 @@ class HomeView extends React.Component{
                             <div className="rec-stats">
                                 <h1><Link to="projects/53"> City Bike Dashboard</Link></h1>
                                 <h2>{`100% funded`}</h2>
-                                <h3><a href="https://github.com/87danielbradley/Tableau-Challenge">By Daniel Bradley</a></h3>
+                                <h3><a href="https://github.com/87danielbradley/Tableau-Challenge" target="_blank">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
                                     {/* <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
                                     <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>
@@ -72,7 +72,7 @@ class HomeView extends React.Component{
                             <div className="rec-stats">
                                 <h1><Link to="projects/50">Eco Route</Link></h1>
                                 <h2>{`25% funded`}</h2>
-                                <h3><a href="https://github.com/87danielbradley/EcoRoute">By Daniel Bradley</a></h3>
+                                <h3><a href="https://github.com/87danielbradley/EcoRoute" target="_blank">By Daniel Bradley</a></h3>
                                 <div className="rec-stats-icons-container">
                                     {/* <button className="rec-stats-icons"><i className="far fa-bookmark"></i>   </button>
                                     <button className="rec-stats-icons"><i className="far fa-thumbs-up"></i>   </button>

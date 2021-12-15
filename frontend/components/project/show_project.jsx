@@ -67,9 +67,9 @@ class ProjectShow extends React.Component{
   behavior: 'smooth'
 })}>Seed this project</button>
                             
-                            <span className="show-logo" id="github"><a className="show-logo" href="https://github.com/87danielbradley"><i className="fab fa-github"></i></a></span>
-                            <span className="show-logo" id="linkedin"><a className="show-logo" href="https://www.linkedin.com/in/87danielbradley/"><i className="fab fa-linkedin"></i></a></span>
-                            <span className="show-logo" id="angellist"><a className="show-logo" href="https://angel.co/u/daniel-james-bradley"><i className="fab fa-angellist"></i></a></span>
+                            <span className="show-logo" id="github"><a className="show-logo" href="https://github.com/87danielbradley" target="_blank"><i className="fab fa-github"></i></a></span>
+                            <span className="show-logo" id="linkedin"><a className="show-logo" href="https://www.linkedin.com/in/87danielbradley/" target="_blank"><i className="fab fa-linkedin"></i></a></span>
+                            <span className="show-logo" id="angellist"><a className="show-logo" href="https://angel.co/u/daniel-james-bradley" target="_blank"><i className="fab fa-angellist"></i></a></span>
                         <div>
 
                             </div>
