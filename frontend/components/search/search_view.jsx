@@ -52,7 +52,7 @@ class SearchBar extends React.Component{
     render(){
         const results = this.matches().slice(0,10).map((ele, idx) => {
             return (
-                <li className="search-results" key={idx} onClick={()=>this.selectProject()}><Link to={`projects/${ele.id - 1}`}>
+                <li className="search-results" key={idx} onClick={()=>this.selectProject()}><Link to={`projects/${ele.id }`}>
                     <div className="flex-row">
                         <img src={ele.url} width="100" height="75"/>
                         <div className="flex-col">
