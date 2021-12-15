@@ -25,11 +25,11 @@ class DiscoverView extends React.Component{
         event.preventDefault()
         const addProjects = this.state.numProjects + 3
         this.setState({numProjects: addProjects})
-        debugger
+        
     }
     
     render(){
-        debugger
+       
         const {projects} = this.props
         
         return[

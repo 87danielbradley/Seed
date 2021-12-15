@@ -4,9 +4,14 @@ import { RECEIVE_PROJECT, RECEIVE_PROJECTS, REMOVE_PROJECT } from "../actions/pr
 
 const projectsReducer = (state = {}, action) => {
     Object.freeze(state);
+    let newState = {}
     switch (action.type) {
         case RECEIVE_PROJECTS:
-            return action.projects;
+            Object.values(action.projects).forEach(project => {
+                newState[project.id] = project
+            })
+            
+            return newState;
         case RECEIVE_PROJECT:
             if (Object.values(state).filter( project => project.id === action.project.id).length > 0){
             return state
