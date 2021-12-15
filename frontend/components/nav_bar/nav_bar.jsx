@@ -42,7 +42,7 @@ class NavBar extends React.Component{
     }
     
     render(){
-        
+    
         return(
             
             <div className="nav-bar">
@@ -53,7 +53,8 @@ class NavBar extends React.Component{
                 <h1 className="nav-title"><Link className="nav-title" to="/">SEEDBED <i className="fas fa-seedling"></i></Link></h1>
                 <div>
                 {this.state.search === 'open' ? <SearchContainer key={this.state.search} searchClick={this.searchClick}/> : null} 
-                <button className="nav-link nav-button" onClick={this.searchClick}>Search <i className="fas fa-search"></i></button>
+                {this.props.location.pathname === '/' ? <button className="nav-link nav-button" onClick={this.searchClick}>Search <i className="fas fa-search"></i></button> : null}
+                
                 {this.props.currentUser ? (
                     <button className="navbar-logout" onClick={this.openModal}><i className="fas fa-globe"></i></button>
                 ):(

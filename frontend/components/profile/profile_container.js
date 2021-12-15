@@ -10,7 +10,7 @@ logout
 const mSTP = (state, ownProps) => {
     
     const projectList = (state.session.currentUser ? Object.values(state.entities.projects).filter(project => project.author_id === state.session.currentUser.id) : [])
-  debugger
+  
     return {
     formType: 'profile',
     projects: projectList
