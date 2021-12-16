@@ -51,7 +51,9 @@ SeedBed is a full stack app with Ruby on Rails/PostgreSQL backend and Javascript
   + reactive display for various screen widths from mobile to pc.
 
 
- 
+ ## Code Excerpt
+ <img src="https://github.com/87danielbradley/Seed/blob/main/app/assets/images/codeExample.png?raw=true" />
+ - This code snippet shows the logic used to calculate funding percentage and the number of days left.
  
 
 
