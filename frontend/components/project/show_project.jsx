@@ -9,7 +9,8 @@ class ProjectShow extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            tab: 'campaign'
+            tab: 'campaign',
+            reward: ''
         }
     }
     componentDidMount(){
@@ -22,7 +23,20 @@ class ProjectShow extends React.Component{
     tabSelect(field){
         this.setState({tab: field})
     }
-
+    handleSubmit(event) {
+        
+        event.preventDefault();
+        this.props.createPledge(this.state);
+    }
+    update(field){
+        
+        return (event) => this.setState({[field]: event.target.value})
+    }
+    rewardSelect(rewardId){
+        
+        return () => this.setState({reward: rewardId})
+    }
+    
 
     render(){
         
@@ -140,7 +154,7 @@ class ProjectShow extends React.Component{
                                 }>Continue</button>
                             </form>
                             </div>
-                            {this.props.project.rewards.map(reward =>  <RewardElement reward={reward}/>)}
+                            {this.props.project.rewards.map(reward =>  <RewardElement rewardSelect={this.rewardSelect(reward.id)} reward={reward}/>)}
                            
                         </div>
                     </div>

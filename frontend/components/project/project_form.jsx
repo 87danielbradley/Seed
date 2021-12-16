@@ -15,7 +15,7 @@ class ProjectForm extends React.Component{
         this.addReward = this.addReward.bind(this)
     }
     handleSubmit(event) {
-        debugger
+        
         event.preventDefault();
         this.props.action(this.state);
         this.props.history.push(`/`)

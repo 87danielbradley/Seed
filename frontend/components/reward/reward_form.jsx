@@ -13,14 +13,14 @@ class RewardForm extends React.Component{
         this.update = this.update.bind(this);
     }
     handleSubmit(event) {
-        debugger
+       
         event.preventDefault();
         this.props.createReward(this.state);
         
     }
 
     update(field){
-        debugger
+       
         
         return (event) => this.setState({[field]: event.target.value})
     }
