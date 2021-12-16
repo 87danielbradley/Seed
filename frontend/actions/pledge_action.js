@@ -12,6 +12,6 @@ const receivePledge = (pledge) => ({
 
 
 export const createPledge = (pledgeForm) => dispatch => postProject(pledgeForm)
-    .then((pledge) => dispatch(receiveProject(pledge)))
+    .then((pledge) => dispatch(receivePledge(pledge)))
 
 
