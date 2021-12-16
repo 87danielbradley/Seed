@@ -311,9 +311,12 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                         </div>
                     </div>
 
-                    {rewardList.map( element => element)}
+                    
                    
-                
+                {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
+                <button className="project-form-submit" type="submit" value={this.props.formType}>Update Project</button> :
+                (this.props.formType === 'Create Project') ? <button className="project-form-submit" type="submit" value={this.props.formType}>Create Project</button>:
+                <button className="project-form-submit" onClick={() => this.props.history.push('/')}>Return Home</button>}
                 
                 
                 
@@ -322,17 +325,28 @@ Funding is all-or-nothing. If you don’t meet your goal, you won’t receive an
                 
                 
                </form>:
-               (this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
+               <div>
+                   <div className="large-form-box-title">
+                        <h2>Add your rewards</h2>
+                        <h3>Offer simple, meaningful ways to bring backers closer to your project and celebrate it coming to life.</h3>
+                    </div>
+                    <div className="large-form-box">
+                        <div className="small-form-box-left">
+                            <h3>Add a reward</h3>
+                            <p>Offer tangible or intangible things that bring backers closer to your project.</p>
+                        </div>
+
+                    </div>
+                   {rewardList.map( element => element)}
+
+               {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
                 <button className="project-reward-create" onClick={this.addReward}>Add Reward</button> :null}
                 
-                
+                </div>
+            }
                    
                    
                 
-                {(this.props.currentUser.id === this.props.project.author_id && this.props.formType === 'Update Project') ?       
-                <button className="project-form-submit" type="submit" value={this.props.formType}>Update Project</button> :
-                (this.props.formType === 'Create Project') ? <button className="project-form-submit" type="submit" value={this.props.formType}>Create Project</button>:
-                <button className="project-form-submit" onClick={() => this.props.history.push('/')}>Return Home</button>}
                
            </div>
         )

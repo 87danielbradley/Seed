@@ -10,14 +10,17 @@ class RewardForm extends React.Component{
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.update = this.update.bind(this);
     }
     handleSubmit(event) {
+        debugger
         event.preventDefault();
         this.props.createReward(this.state);
         
     }
 
     update(field){
+        debugger
         
         return (event) => this.setState({[field]: event.target.value})
     }
@@ -27,18 +30,8 @@ class RewardForm extends React.Component{
         return(
            <div className="reward-form-container">
                
-               <div className="reward-form" onSubmit={this.handleSubmit}>
-                    <div className="large-form-box-title">
-                        <h2>Add your rewards</h2>
-                        <h3>Offer simple, meaningful ways to bring backers closer to your project and celebrate it coming to life.</h3>
-                    </div>
-                    <div className="large-form-box">
-                        <div className="small-form-box-left">
-                            <h3>Add a reward</h3>
-                            <p>Offer tangible or intangible things that bring backers closer to your project.</p>
-                        </div>
-
-                    </div>
+               <form className="reward-form" onSubmit={this.handleSubmit}>
+                    
                     <div className="large-form-box">
                        
                         <div className="small-form-box-right">
@@ -162,12 +155,12 @@ class RewardForm extends React.Component{
                    
                 
                 {(this.props.currentUser.id === this.props.project.author_id) ?       
-                <button className="reward-form-submit" type="submit" value={this.props.formType}>Add reward</button> :
+                <button className="reward-form-submit" type="submit" value={this.props.formType}>Save reward</button> :
                 <button className="reward-form-submit" onClick={() => this.props.history.push('/')}>Return Home</button>}
                 
                 
                 
-               </div>
+               </form>
            </div>
         )
     }
